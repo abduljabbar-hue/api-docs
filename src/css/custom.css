@@ -1,30 +1,125 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Wibeex brand — primary accent #03f8c5
+ *
+ * Dark palette overrides must use `html[data-theme='dark']` so they win over
+ * Infima’s `html[data-theme='dark']` block (same specificity; our file loads after).
  */
-
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --wibeex-navbar-bg: #ffffff;
+  --wibeex-navbar-border: rgba(15, 23, 42, 0.08);
+  --wibeex-navbar-link: #1e293b;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-link-color: #1e293b;
+  --ifm-color-primary: #03f8c5;
+  --ifm-color-primary-dark: #02c49a;
+  --ifm-color-primary-darker: #019a7a;
+  --ifm-color-primary-darkest: #017a62;
+  --ifm-color-primary-light: #4dfcd9;
+  --ifm-color-primary-lighter: #7efde2;
+  --ifm-color-primary-lightest: #b4ffee;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(3, 248, 197, 0.12);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+html[data-theme='dark'] {
+  /* Base dark: deep blue-black; pairs with accent #03f8c5 */
+  --wibeex-dark-bg: #010b11;
+  --wibeex-dark-surface: #0c1820;
+  --wibeex-navbar-bg: var(--wibeex-dark-bg);
+  --wibeex-navbar-border: rgba(255, 255, 255, 0.08);
+  --wibeex-navbar-link: #e2e8f0;
+  --ifm-background-color: var(--wibeex-dark-bg);
+  --ifm-background-surface-color: var(--wibeex-dark-surface);
+  --ifm-navbar-background-color: var(--wibeex-dark-bg);
+  --ifm-footer-background-color: var(--wibeex-dark-bg);
+  --ifm-navbar-link-color: #e2e8f0;
+  --ifm-color-primary: #03f8c5;
+  --ifm-color-primary-dark: #02c49a;
+  --ifm-color-primary-darker: #019a7a;
+  --ifm-color-primary-darkest: #017a62;
+  --ifm-color-primary-light: #4dfcd9;
+  --ifm-color-primary-lighter: #7efde2;
+  --ifm-color-primary-lightest: #b4ffee;
+  --docusaurus-highlighted-code-line-bg: rgba(3, 248, 197, 0.15);
+}
+
+/* Top navbar — clean exchange-docs style (similar to CoinEx API docs) */
+/* NAVBAR */
+.navbar {
+  background: var(--wibeex-navbar-bg);
+  border-bottom: 1px solid var(--wibeex-navbar-border);
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04);
+  height: 64px; /* 🔥 fixed height = clean alignment */
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+html[data-theme='dark'] .navbar {
+  box-shadow: none;
+}
+
+/* Inner container */
+.navbar__inner {
+  
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+
+/* Logo */
+.navbar__brand {
+  margin-right: 0; /* remove uneven gap */
+  display: flex;
+  align-items: center;
+ 
+}
+
+
+.navbar__logo img {
+  height: 30px; /* 🔥 slightly bigger + balanced */
+  width: auto;
+  display: block;
+  margin-right: 200px;
+}
+
+
+
+.navbar__link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--wibeex-navbar-link);
+  padding: 6px 10px; /* 🔥 balanced click area */
+  border-radius: 6px;
+  transition: all 0.18s ease;
+  margin: 0 30px;
+}
+
+
+/* Hover */
+.navbar__link:hover {
+  color: var(--ifm-color-primary);
+  background: rgba(3, 248, 197, 0.08);
+}
+
+/* Active */
+.navbar__link--active {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.navbar__prism{
+  background-color: blue;
+}
+
+
+
+
+/* Doc sidebar: slightly tighter label for mobile top bar */
+@media (max-width: 996px) {
+  .navbar__logo img {
+    height: 1.75rem;
+  }
 }

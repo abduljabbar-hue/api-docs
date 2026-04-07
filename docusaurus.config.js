@@ -4,10 +4,10 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Wibeex API Docs',
+  title: 'Welcome to Wibeex API Docs',
   favicon: 'img/favicon.ico',
 
-  url: 'http://localhost',
+  url: 'https://www.wibeex.com',
   baseUrl: '/',
 
   onBrokenLinks: 'throw',
@@ -24,9 +24,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
         },
-        blog: {
-          showReadingTime: true,
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -36,13 +34,20 @@ const config = {
 
   themeConfig: {
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'light',
+      disableSwitch: false,
+      // Simple light ↔ dark toggle (like CoinEx); set true to add system theme as a third step
+      respectPrefersColorScheme: false,
     },
 
     navbar: {
+      hideOnScroll: false,
       logo: {
         alt: 'Wibeex',
-        src: 'img/logo.svg',
+        src: 'img/wibeex-logo.png',
+        href: 'https://www.wibeex.com/',
+        width: 137,
+        height: 32,
       },
       items: [
         {
@@ -58,17 +63,15 @@ const config = {
           position: 'left',
         },
         {
-          to: '/blog',
-          label: 'Blog',
+          type: 'docSidebar',
+          sidebarId: 'authenticatedSidebar',
+          label: 'Authenticated API',
           position: 'left',
         },
       ],
     },
 
-    footer: {
-      style: 'dark',
-      copyright: `© ${new Date().getFullYear()} Wibeex`,
-    },
+
 
     prism: {
       theme: prismThemes.github,

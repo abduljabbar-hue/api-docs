@@ -8,14 +8,14 @@ Retrieve summary information for all trading markets.
 
 This endpoint returns aggregated market data including price, volume, and 24-hour statistics for each trading pair.
 
-This is a **public endpoint**.
+
 
 ---
 
 ## HTTP Request
 
 ```
-GET /api/v2/summary
+GET /api/v2/peatio/public/summary
 ```
 
 ---
@@ -39,7 +39,7 @@ GET /api/v2/summary
 ## Example Request
 
 ```bash
-curl https://api.wibeex.com/api/v2/summary
+curl https://wibeex.com/api/v2/peatio/public/summary
 ```
 
 ---

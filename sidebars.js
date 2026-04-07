@@ -38,10 +38,9 @@ const sidebars = {
           type: 'category',
           label: 'WebSocket',
           items: [
-            'spot/ws/ticker-stream',
-            'spot/ws/trade-stream',
+          
             'spot/ws/orderbook-stream',
-            'spot/ws/connection'
+           
           ],
         },
       ],
@@ -59,7 +58,7 @@ const sidebars = {
             'assets/rest/currencies',
             'assets/rest/assets',
             'assets/rest/coin-listings',
-            "assets/rest/best-price",
+           
             'assets/rest/blockchains',
             'assets/rest/currency',
           ],
@@ -77,6 +76,20 @@ const sidebars = {
             'accounts/rest/member-levels',
           ],
         }
+      ],
+    },
+  ],
+
+  /** Signed Peatio / Barong routes only — separate navbar from Public API Reference */
+  authenticatedSidebar: [
+    {
+      type: 'category',
+      label: 'REST API',
+      items: [
+        'authenticated/rest/place-order',
+        'authenticated/rest/cancel-orders',
+        'authenticated/rest/balances',
+        'authenticated/rest/user-profile',
       ],
     },
   ],

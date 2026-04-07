@@ -10,14 +10,14 @@ The order book contains lists of active **buy (bids)** and **sell (asks)** order
 
 This endpoint allows applications to view the current market depth and liquidity.
 
-This is a **public endpoint**.
+
 
 ---
 
 ## HTTP Request
 
 ```
-GET /api/v2/markets/:market/order-book
+GET /api/v2/peatio/public/markets/:market/order-book
 ```
 
 ---
@@ -38,17 +38,13 @@ GET /api/v2/markets/:market/order-book
 |------|------|-------------|
 | asks | array | List of sell orders |
 | bids | array | List of buy orders |
-| asks[].price | string | Sell order price |
-| asks[].volume | string | Sell order amount |
-| bids[].price | string | Buy order price |
-| bids[].volume | string | Buy order amount |
 
 ---
 
 ## Example Request
 
 ```bash
-curl "https://api.wibeex.com/api/v2/markets/btcusdt/order-book"
+curl "https://wibeex.com/api/v2/peatio/public/markets/btcusdt/order-book?bids_limit=1&asks_limit=1"
 ```
 
 ---
@@ -57,14 +53,54 @@ curl "https://api.wibeex.com/api/v2/markets/btcusdt/order-book"
 
 ```json
 {
-  "asks": [
-    ["62450.10", "0.35"],
-    ["62460.00", "0.50"]
-  ],
-  "bids": [
-    ["62440.50", "1.20"],
-    ["62430.00", "0.80"]
-  ]
+    "asks": [
+        {
+            "id": 212477,
+            "side": "sell",
+            "ord_type": "market",
+            "stop_loss_type": "market",
+            "stop_price": "0.0",
+            "price": null,
+            "avg_price": "0.0",
+            "state": "wait",
+            "market": "btcusdt",
+            "maker_fee": "0.0015",
+            "created_at": "2026-04-06T13:55:06Z",
+            "updated_at": "2026-04-06T13:55:06Z",
+            "origin_volume": "0.00108",
+            "remaining_volume": "0.00108",
+            "executed_volume": "0.0",
+            "amount_precision": 5,
+            "price_precision": 2,
+            "trades_count": 0,
+            "bid": "usdt",
+            "ask": "btc"
+        }
+    ],
+    "bids": [
+        {
+            "id": 212477,
+            "side": "sell",
+            "ord_type": "market",
+            "stop_loss_type": "market",
+            "stop_price": "0.0",
+            "price": null,
+            "avg_price": "0.0",
+            "state": "wait",
+            "market": "btcusdt",
+            "maker_fee": "0.0015",
+            "created_at": "2026-04-06T13:55:06Z",
+            "updated_at": "2026-04-06T13:55:06Z",
+            "origin_volume": "0.00108",
+            "remaining_volume": "0.00108",
+            "executed_volume": "0.0",
+            "amount_precision": 5,
+            "price_precision": 2,
+            "trades_count": 0,
+            "bid": "usdt",
+            "ask": "btc"
+        }
+    ]
 }
 ```
 

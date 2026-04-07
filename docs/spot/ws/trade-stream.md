@@ -25,10 +25,7 @@ btcusdt.trades
 ## Subscribe Example
 
 ```
-{
-  "event": "subscribe",
-  "streams": ["btcusdt.trades"]
-}
+wss://wibeex.com/api/v2/ranger/public/?stream=btcusdt.trades
 ```
 
 ---
@@ -37,13 +34,17 @@ btcusdt.trades
 
 ```json
 {
-  "stream": "btcusdt.trades",
-  "data": {
-    "price": "62450.10",
-    "amount": "0.25",
-    "side": "buy",
-    "timestamp": 1710000000
-  }
+    "btcusdt.trades": {
+        "trades": [
+            {
+                "amount": "0.00049",
+                "date": 1775548452,
+                "price": "68603.41",
+                "taker_type": "sell",
+                "tid": 5875
+            }
+        ]
+    }
 }
 ```
 

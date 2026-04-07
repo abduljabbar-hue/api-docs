@@ -15,7 +15,7 @@ This is a **public endpoint**.
 ## HTTP Request
 
 ```
-POST /api/v2/currencies/best_price
+POST /api/v2/peatio/public/currencies/best_price
 ```
 
 ---
@@ -32,7 +32,7 @@ POST /api/v2/currencies/best_price
 ## Example Request
 
 ```bash
-curl -X POST https://api.wibeex.com/api/v2/currencies/best_price \
+curl -X POST https://wibeex.com/api/v2/peatio/public/currencies/best_price \
   -H "Content-Type: application/json" \
   -d '{
         "from_currency": "btc",

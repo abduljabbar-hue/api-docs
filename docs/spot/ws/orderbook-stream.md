@@ -2,53 +2,63 @@
 sidebar_position: 2
 ---
 
-# Order Book Incremental Stream
+# WebSocket Streams
 
-Receive incremental updates for the order book of a market.
+The Wibeex WebSocket API allows clients to subscribe to real-time market and global data streams.
 
----
-
-## Stream Name
-
-```
-<market>.ob-inc
-```
-
-Example:
-
-```
-btcusdt.ob-inc
-```
+It provides low-latency updates for trades, tickers, order books, and global market data.
 
 ---
 
-## Subscribe Example
+## Base URL
+wss://staging.wibeex.com/api/v2/ranger/public
 
-```
-{
-  "event": "subscribe",
-  "streams": ["btcusdt.ob-inc"]
-}
-```
 
----
+## Subscription
 
-## Example Response
+Connect using the `stream` query parameter:
+
+wss://staging.wibeex.com/api/v2/ranger/public/?stream=stream_name
+
+You can subscribe to one stream per connection.
+
+
+## Market Streams
+
+These streams provide real-time data for a specific trading pair.
+
+| Stream | Description |
+|--------|------------|
+| `market.kline-15m` | 15-minute candlestick (kline) data |
+| `market.trades` | Real-time trade updates |
+| `market.update` | Order book updates |
+
+
+
+## Global Streams
+
+These streams provide aggregated or platform-wide data.
+
+| Stream | Description |
+|--------|------------|
+| `global.currencies_data` | General currency information |
+| `global.currencies_movers` | Top gaining and losing currencies |
+| `global.currencies_prices` | Latest prices for all currencies |
+| `global.tickers` | Ticker data for all markets |
+
+## Message Format
+All messages are sent in JSON format. The structure depends on the subscribed stream.
+
+### Example (Trades)
 
 ```json
 {
-  "stream": "btcusdt.ob-inc",
+  "type": "trade",
+  "market": "btcusdt",
   "data": {
-    "asks": [["62450.10", "0.35"]],
-    "bids": [["62440.50", "1.20"]]
+    "price": "65000.12",
+    "amount": "0.002",
+    "timestamp": 1710000000
   }
 }
-```
 
----
-
-## Notes
-
-- Updates contain only changed price levels.
-- Clients should maintain a local order book state.
-- Periodic snapshots ensure consistency.

@@ -15,7 +15,7 @@ This is a **public endpoint**.
 ## HTTP Request
 
 ```
-GET /api/v2/blockchain/networks
+GET /api/v2/peatio/public/blockchain/networks
 ```
 
 ---
@@ -23,7 +23,7 @@ GET /api/v2/blockchain/networks
 ## Example Request
 
 ```bash
-curl https://api.wibeex.com/api/v2/blockchain/networks
+curl https://wibeex.com/api/v2/peatio/public/blockchain/networks
 ```
 
 ---

@@ -6,17 +6,19 @@ sidebar_position: 4
 
 Retrieve the aggregated depth for a specific market.
 
-The depth endpoint returns lists of **bid and ask price levels** in the order book.  
-Both asks and bids are sorted from **highest price to lowest price**.
+This endpoint returns lists of **ask (sell)** and **bid (buy)** price levels from the order book.
 
-This is a **public endpoint**.
+- **Asks** are sorted from **lowest price to highest price**  
+- **Bids** are sorted from **highest price to lowest price**
+
+
 
 ---
 
 ## HTTP Request
 
 ```
-GET /api/v2/markets/:market/depth
+GET /api/v2/peatio/public/markets/:market/depth
 ```
 
 ---
@@ -35,19 +37,14 @@ GET /api/v2/markets/:market/depth
 | Field | Type | Description |
 |------|------|-------------|
 | timestamp | integer | Unix timestamp of the response |
-| asks | array | List of sell price levels |
-| bids | array | List of buy price levels |
-| asks[].price | string | Sell order price |
-| asks[].volume | string | Total sell volume at that price level |
-| bids[].price | string | Buy order price |
-| bids[].volume | string | Total buy volume at that price level |
-
+| asks | array | List of sell price levels `[price, volume]` |
+| bids | array | List of buy price levels `[price, volume]` |
 ---
 
 ## Example Request
 
 ```bash
-curl https://api.wibeex.com/api/v2/markets/btcusdt/depth
+curl https://wibeex.com/api/v2/peatio/public/markets/btcusdt/depth?limit=2
 ```
 
 ---

@@ -25,10 +25,7 @@ btcusdt.ticker
 ## Subscribe Example
 
 ```
-{
-  "event": "subscribe",
-  "streams": ["btcusdt.ticker"]
-}
+    wss://wibeex.com/api/v2/ranger/public/?stream=ethusdt.ticker
 ```
 
 ---
@@ -37,13 +34,32 @@ btcusdt.ticker
 
 ```json
 {
-  "stream": "btcusdt.ticker",
-  "data": {
-    "last": "62450.25",
-    "high": "63000.00",
-    "low": "61020.10",
-    "volume": "128.45"
-  }
+    "ethusdt.ticker": {
+        "at": 1775548016,
+        "avg_price": "2132.163526076346065174933179386637376808",
+        "base_unit": "eth",
+        "base_unit_icon_url": {
+            "url": "https://stage-wibeex.s3.ap-southeast-1.amazonaws.com/eth.png"
+        },
+        "base_unit_name": "Ethereum",
+        "buy": "2102.2",
+        "high": "2165.2949",
+        "last": "2104.0937",
+        "low": "2091.4116",
+        "name": "ETH/USDT",
+        "open": 2127.85,
+        "price_change_percent": "-1.12%",
+        "quote_unit": "usdt",
+        "quote_unit_icon_url": {
+            "url": "https://stage-wibeex.s3.ap-southeast-1.amazonaws.com/usdt_future.png"
+        },
+        "quote_unit_name": "Tether USDT",
+        "sell": "2112.51",
+        "total_volume": "341339.08553556",
+        "total_volume_base_currency": "160.415013058044505016800996310830180699",
+        "usd": null,
+        "volume": "160.8978"
+    }
 }
 ```
 

@@ -2,162 +2,187 @@
 sidebar_position: 1
 ---
 
-# API Introduction
+# API introduction
 
-Welcome to the **Wibeex Exchange API documentation**.
+Welcome to the **Wibeex API documentation**. 
 
-This documentation provides developers with detailed information on how to integrate and interact with the Wibeex exchange. Using the API, developers can build trading applications, automate trading strategies, and integrate exchange functionality into their systems.
+This documentation aims to provide developers with detailed information on how to integrate and interact with the **Wibeex** exchange.
 
-The Wibeex API is designed to be secure, reliable, and flexible for both individual developers and institutional trading platforms.
+Wibeex offers user  public apis anyone can access about spot and listed currencies and markets and authencated apis to place spot order and cancel it and get user profile details on wibeex to build trading applications to run on wibeex.
 
----
+## API Documentation structure
+Our API documentation is organized according to the following structures:
 
-## API Documentation Structure
+| Section | Description |
+|---------|-------------|
+| **API introduction** |Provides an overall introduction to the API, document organization, and related materials (including demo). |
+| **Integration guide** | Describes how to proceed with the entire access process to integrate a wibeex api in you application . |
+| **Create API key** | Guides to create an api key on wibeex require parameteres and process to an api key. |
+| **Rate limits** |Provides detailed information on the function, usage and sample code of each API endpoint. |
+| **Error handling** | Lists common error codes and corresponding error handling methods. |
 
-Our API documentation is organized into the following sections:
-
-**API Introduction**  
-Provides an overview of the API and explains how the documentation is structured.
-
-**Integration Guide**  
-Explains how developers can start integrating with the API and outlines best practices.
-
-**Authentication**  
-Describes how to create an API key and authenticate API requests.
-
-**Rate Limit**  
-Provides information about request limits and how to safely interact with the API.
-
-**Error Handling**  
-Lists common API error codes and recommended handling methods.
-
-**Enumeration of Definitions**  
-Provides definitions and enumeration values used across different API endpoints.
-
-**FAQ**  
-Answers frequently asked questions related to API usage and integration.
-
----
 
 ## API Base URL
 
-Wibeex provides services through both **HTTP REST APIs** and **WebSocket APIs**.
+Wibeex provides services through **HTTP protocol** and **WebSockets protocol**.  
+The base URLs for accessing these services are as follows:
 
-### REST API
+> ℹ️ **INFO**
 
-The base URL for the REST API is:
+- **HTTP Base URL**  
+  https://wibeex.com/api/v2/peatio  
+  https://wibeex.com/api/v2/barong  
 
-```
-https://api.wibeex.com/v2
-```
+- **WebSocket Base URL**  
+  wss://wibeex.com/api/v2/peatio/public
 
-REST endpoints are used for requests such as retrieving balances, creating orders, and managing account information.
 
----
+## Module grouping
+Wibeex API is grouped in public apis and authenticated apis specific grouping is as follows. 
 
-### WebSocket API
+### 1. Public API Reference
 
-WebSocket endpoints provide **real-time market updates**.
+<table>
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th>Submodule</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Spot -->
+    <tr>
+      <td rowspan="9"><b>Spot</b></td>
+      <td>Market Ticker</td>
+      <td>Latest market ticker data</td>
+    </tr>
+    <tr>
+      <td>Order Book</td>
+      <td>Order book depth</td>
+    </tr>
+    <tr>
+      <td>Recent Trades</td>
+      <td>Latest trades</td>
+    </tr>
+    <tr>
+      <td>Markets</td>
+      <td>Market list</td>
+    </tr>
+    <tr>
+      <td>Market Depth</td>
+      <td>Aggregated depth data</td>
+    </tr>
+    <tr>
+      <td>K-Line (OHLC)</td>
+      <td>Candlestick data</td>
+    </tr>
+    <tr>
+      <td>Market Summary</td>
+      <td>24h market summary</td>
+    </tr>
+    <tr>
+      <td>Ticker</td>
+      <td>All market tickers</td>
+    </tr>
+    <tr>
+      <td>WebSocket</td>
+      <td>Real-time public streams</td>
+    </tr>
 
-Example WebSocket endpoints:
+    <!-- Assets -->
+    <tr>
+      <td rowspan="6"><b>Assets</b></td>
+      <td>List Currencies</td>
+      <td>Currency list</td>
+    </tr>
+    <tr>
+      <td>Assets</td>
+      <td>Asset details</td>
+    </tr>
+    <tr>
+      <td>Coin Listings</td>
+      <td>Listed coins</td>
+    </tr>
+    <tr>
+      <td>Best Price Conversion</td>
+      <td>Price conversion</td>
+    </tr>
+    <tr>
+      <td>Blockchain Networks</td>
+      <td>Supported networks</td>
+    </tr>
+    <tr>
+      <td>Get Currency</td>
+      <td>Currency details</td>
+    </tr>
 
-```
-wss://socket.wibeex.com/v2/spot
-wss://socket.wibeex.com/v2/futures
-```
+    <!-- Accounts -->
+    <tr>
+      <td rowspan="1"><b>Accounts</b></td>
+      <td>Member Levels</td>
+      <td>User level based on trading activity</td>
+    </tr>
+  </tbody>
+</table>
 
-WebSocket APIs are recommended for applications that require real-time market data such as trading bots or trading dashboards.
+### 2.  Authenticated API 
 
----
+<table>
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th>Submodule</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="4"><b>Authenticated</b></td>
+      <td>Place Order</td>
+      <td>Create buy/sell order</td>
+    </tr>
+    <tr>
+      <td>Cancel Orders</td>
+      <td>Cancel existing orders</td>
+    </tr>
+    <tr>
+      <td>Account Balances</td>
+      <td>User balances</td>
+    </tr>
+    <tr>
+      <td>User Profile (/me)</td>
+      <td>User information</td>
+    </tr>
+  </tbody>
+</table>
 
-## Authentication and Security
 
-To ensure the security of trading operations and account information, authenticated API endpoints require an **API key**.
-
-Before using authenticated APIs, users must create an API key from the exchange dashboard.
-
-### API Key Creation Process
-
-1. Log in to the exchange account.
-2. Navigate to the **API Management** section.
-3. Create a new API key.
-4. Submit the API key request.
-
-For security reasons, API keys are **not activated immediately**.  
-Each API key must be **approved by an administrator** before it can be used.
-
-Each user account can create a maximum of:
-
-```
-5 API keys
-```
-
----
-
-## Allowed API Endpoints
-
-API keys are restricted to specific endpoints for security purposes.
-
-The following endpoints are allowed when using an API key:
-
-```
-/api/v2/peatio/market/orders
-/api/v2/peatio/market/orders/cancel
-/api/v2/peatio/account/balances
-/api/v2/barong/resource/users/me
-```
-
-### Endpoint Description
-
-| Endpoint | Description |
-|--------|--------|
-| `/api/v2/peatio/market/orders` | Create a new order |
-| `/api/v2/peatio/market/orders/cancel` | Cancel an existing order |
-| `/api/v2/peatio/account/balances` | Retrieve account balances |
-| `/api/v2/barong/resource/users/me` | Retrieve authenticated user information |
-
-Requests to endpoints outside this list will be rejected.
-
----
-
-## Module Grouping
-
-The Wibeex API is grouped according to business modules.
-
-| Module | Description |
-|------|------|
-| Account | Retrieve account information |
-| Assets | Manage balances and asset information |
-| Market | Access market data such as tickers and trades |
-| Orders | Create and cancel orders |
-| WebSocket | Real-time market data streams |
-
----
 
 ## Related Resources
 
-Before integrating with the API, developers may find the following resources useful:
+Before using the Wibeex Exchange API, you may need to be familiar with the following resources:
 
-**API Documentation**  
-Provides detailed information about each API endpoint including parameters and response structures.
+- **API Documentation**  
+  Provides detailed information about each API endpoint, including request methods, parameters, and response results.
 
-**API Management Console**  
-Allows users to generate and manage API keys.
+- **API Management Console**  
+  Offers functionality to generate, manage, and set permissions for API keys.  
+  Access it here: https://wibeex.com/api-management
 
-**Sample Code**  
-Example implementations demonstrating how to interact with the API.
+- **Code Examples**  
+  JavaScript examples for quick integration.  
+  [Place Order Example](/docs/authentication#javascript-example-place-order---post)
 
----
+  [Get Request Example](/docs/authentication.md#javascript-example)
 
+  [Cancel Order Example](/docs/authentication.md#javascript-example-cancel-order---post)
 ## Support and Feedback
 
-If you encounter any issues while integrating with the API, please contact our **support team**.
+If you encounter any issues or need further assistance while using the API, feel free to contact the Wibeex Support Team. We are always ready to assist you and provide guidance throughout your development process.
 
-We welcome feedback and suggestions that help improve the developer experience and documentation.
+We highly value your feedback. If you have any suggestions or ideas for improving the API documentation, please let us know. We continuously enhance and update our documentation to keep it aligned with the API and your needs.
 
-Our documentation will continue to evolve alongside the API to ensure it remains accurate and useful.
+Thank you for choosing **Wibeex API services**.  
+We look forward to seeing you build powerful applications and integrations with our exchange. 
 
----
-
-Thank you for using the **Wibeex Exchange API**.  
-We look forward to seeing the applications and trading tools you build.

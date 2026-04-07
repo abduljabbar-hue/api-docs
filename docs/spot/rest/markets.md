@@ -8,17 +8,13 @@ Retrieve all available trading markets.
 
 This endpoint returns markets that are currently enabled for trading as well as markets that are scheduled to launch in the future.
 
-This is a **public endpoint**.
-
----
 
 ## HTTP Request
 
 ```
-GET /api/v2/markets
+GET /api/v2/peatio/public/markets
 ```
 
----
 
 ## Request Parameters
 
@@ -33,23 +29,33 @@ GET /api/v2/markets
 
 | Field | Type | Description |
 |------|------|-------------|
-| id | string | Market identifier |
-| name | string | Market name |
+| id | string | Market identifier (e.g., `btcusdt`) |
+| name | string | Market name (e.g., `BTC/USDT`) |
 | base_unit | string | Base currency |
 | quote_unit | string | Quote currency |
 | min_price | string | Minimum order price |
 | max_price | string | Maximum order price |
 | min_amount | string | Minimum order amount |
+| min_total | string | Minimum order total value |
 | amount_precision | integer | Amount decimal precision |
 | price_precision | integer | Price decimal precision |
-| state | string | Market status |
+| total_precision | integer | Total value precision |
+| state | string | Market status (e.g., `enabled`) |
+| trading_enabled | boolean | Whether trading is currently enabled |
+| launch_status | string | Market launch status (e.g., `live`, `upcoming`) |
+| launch_time | integer/null | Scheduled launch timestamp |
+| binance_engine | boolean | Indicates if market uses external engine |
+| temporary_stop | boolean | Indicates if trading is temporarily halted |
+| st_designation | boolean | Special treatment designation flag |
+| st_enabled_at | integer/null | Timestamp when ST was enabled |
+| aggregator_data | object | Additional external data info |
 
 ---
 
 ## Example Request
 
 ```bash
-curl https://api.wibeex.com/api/v2/markets
+curl https://wibeex.com/api/v2/peatio/public/markets?limit=1&page=3
 ```
 
 ---
@@ -58,18 +64,29 @@ curl https://api.wibeex.com/api/v2/markets
 
 ```json
 [
-  {
-    "id": "btcusdt",
-    "name": "BTC/USDT",
-    "base_unit": "btc",
-    "quote_unit": "usdt",
-    "min_price": "0.01",
-    "max_price": "1000000",
-    "min_amount": "0.0001",
-    "amount_precision": 6,
-    "price_precision": 2,
-    "state": "enabled"
-  }
+    {
+        "id": "asterusdt",
+        "name": "ASTER/USDT",
+        "base_unit": "aster",
+        "temporary_stop": false,
+        "quote_unit": "usdt",
+        "min_price": "0.33",
+        "max_price": "2.32",
+        "min_amount": "0.01",
+        "min_total": "5.0",
+        "amount_precision": 2,
+        "price_precision": 2,
+        "total_precision": 5,
+        "state": "enabled",
+        "trading_enabled": true,
+        "launch_status": "live",
+        "launch_time": null,
+        "aggregator_data": {
+            "binance_engine": false
+        },
+        "st_designation": false,
+        "st_enabled_at": null
+    }
 ]
 ```
 

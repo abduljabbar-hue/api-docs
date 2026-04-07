@@ -15,7 +15,7 @@ This is a **public endpoint**.
 ## HTTP Request
 
 ```
-GET /api/v2/member-levels
+GET api/v2/peatio/public/member-levels
 ```
 
 ---
@@ -33,7 +33,7 @@ GET /api/v2/member-levels
 ## Example Request
 
 ```bash
-curl https://api.wibeex.com/api/v2/member-levels
+curl https://wibeex.com/api/v2/peatio/public/member-levels
 ```
 
 ---

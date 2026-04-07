@@ -8,14 +8,13 @@ Retrieve ticker information for a specific market.
 
 This endpoint returns the latest trading statistics including price, volume, and price change.
 
-This is a **public endpoint**.
 
----
+
 
 ## HTTP Request
 
 ```
-GET /api/v2/markets/:market/tickers
+GET /api/v2/peatio/public/markets/:market/tickers
 ```
 
 ---
@@ -32,18 +31,24 @@ GET /api/v2/markets/:market/tickers
 
 | Field | Type | Description |
 |------|------|-------------|
-| last | string | Last traded price |
-| high | string | Highest price in the last 24 hours |
+| buy | string | Best bid price |
+| sell | string | Best ask price |
 | low | string | Lowest price in the last 24 hours |
-| volume | string | 24-hour trading volume |
-| price_change_percent | string | 24-hour price change percentage |
-
+| high | string | Highest price in the last 24 hours |
+| open | number | Opening price (24h) |
+| last | string | Last traded price |
+| volume | string | 24h trading volume |
+| total_volume | string | Total traded volume (quote currency) |
+| total_volume_base_currency | string | Total traded volume (base currency) |
+| vol | string | Alias of volume |
+| avg_price | string | Average price |
+| price_change_percent | string | 24h price change percentage |
 ---
 
 ## Example Request
 
 ```bash
-curl https://api.wibeex.com/api/v2/markets/btcusdt/tickers
+curl https://wibeex.com/api/v2/peatio/public/markets/btcusdt/tickers
 ```
 
 ---
@@ -52,11 +57,21 @@ curl https://api.wibeex.com/api/v2/markets/btcusdt/tickers
 
 ```json
 {
-  "last": "62450.25",
-  "high": "63000.00",
-  "low": "61020.10",
-  "volume": "128.45",
-  "price_change_percent": "2.15"
+    "at": 1775483384,
+    "ticker": {
+        "buy": "69345.21",
+        "sell": "69421.53",
+        "low": "68922.39",
+        "high": "69491.17",
+        "open": 67832.98,
+        "last": "69400.74",
+        "volume": "0.0801",
+        "total_volume": "8034.3630354",
+        "total_volume_base_currency": "0.118443315263460340383099784205264165",
+        "vol": "0.0801",
+        "avg_price": "69371.459499022917036773849706875",
+        "price_change_percent": "+2.31%"
+    }
 }
 ```
 
