@@ -18,20 +18,19 @@ Private endpoint—see [Rate limits](../../rate-limits.md).
 
 :::
 
----
+
 
 ## HTTP request
 
 ```
 GET /api/v2/barong/resource/users/me
 ```
----
+
 
 ## Request parameters
 
 No query parameters required for   **`/me`** route.
 
----
 
 ## Response fields
 
@@ -56,7 +55,6 @@ No query parameters required for   **`/me`** route.
 | created_at | string | Account creation timestamp |
 | updated_at | string | Last update timestamp |
 | resend_blocked_time | string | OTP resend restriction time |
----
 
 ## Example request
 
@@ -68,7 +66,6 @@ curl -L "https://wibeex.com/api/v2/barong/resource/users/me" \
  
 ```
 
----
 
 ## Example response
 

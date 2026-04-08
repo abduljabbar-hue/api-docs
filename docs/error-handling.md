@@ -1,6 +1,7 @@
 ---
 sidebar_position: 7
 ---
+
 # Error Handling
 
 Handle responses in the following order:
@@ -9,68 +10,107 @@ Handle responses in the following order:
 2. Parse the response body
 3. Handle success or error based on the structure returned
 
----
+## HTTP Responses
 
-## HTTP Responses (REST)
+| Status | Meaning |
+|--------|--------|
+| 200 | Success |
+| 400 | Invalid request parameters |
+| 401 | Authentication failed |
+| 403 | Forbidden |
+| 404 | Resource not found |
+| 429 | Rate limit exceeded |
+| 500 | Internal server error |
 
-### Step-by-step handling
 
-1. Verify the HTTP **status code**
-   - `2xx` → request successful  
-   - `4xx / 5xx` → request failed  
+## Response Format
 
-2. Parse the JSON response body
+Error responses are returned in the following format:
 
-3. Handle response:
-   - Successful responses return **data**
-   - Error responses return **error details**
+```json
+{
+  "errors": ["error.code"]
+}
 
----
+```
 
-## Success Responses
+## 🔐 Authentication Errors
 
-Successful responses typically return data in the response body.
+These errors occur when API key authentication fails.
 
-### Barong API key errors
+Authentication errors must be resolved before the request can succeed.
 
-Authorization failures from Barong often return a JSON body with an **`errors`** array of string codes, for example:
+
+### Common Authentication Errors
+
+| Error | Description |
+|------|-------------|
+| `authz.unexistent_apikey` | API key is invalid, does not exist, or is not approved |
+| `authz.invalid_signature` | Request signature is incorrect (wrong secret key or signing logic) |
+
+
+### Additional Authentication Errors
+
+These may occur depending on request configuration and API key settings:
+
+| Error | Description |
+|------|-------------|
+| `authz.invalid_api_key_headers` | Required authentication headers are missing or invalid |
+| `authz.nonce_not_valid_timestamp` | Nonce is not a valid timestamp |
+| `authz.nonce_expired` | Nonce is too old or outside allowed time window |
+| `authz.apikey_not_active` | API key is disabled |
+| `authz.apikey_not_approved` | API key is not yet approved |
+| `authz.ip_not_allowed` | Request IP is not allowed for this API key |
+| `authz.apikey_scope_not_allowed` | API key does not have permission for this action |
+| `authz.disabled_2fa` | 2FA must be enabled to use API key features |
+
+
+### Example
 
 ```json
 { "errors": ["authz.invalid_signature"] }
+
 ```
 
-Common Barong codes for API key flows:
 
-| Code | Typical cause |
-|------|----------------|
-| `authz.invalid_api_key_headers` | Missing/blank `X-Auth-*` header. |
-| `authz.nonce_not_valid_timestamp` | Nonce not a positive timestamp. |
-| `authz.nonce_expired` | Nonce outside `apikey_nonce_lifetime` vs server time. |
-| `authz.invalid_signature` | HMAC does not match `APIKeysVerifier`. |
-| `authz.unexistent_apikey` | Unknown `kid`. |
-| `authz.apikey_not_active` | Key disabled. |
-| `authz.apikey_not_approved` | Key pending approval. |
-| `authz.ip_not_allowed` | Request IP not on key allowlist. |
-| `authz.apikey_scope_not_allowed` | Path not allowed for key scope (check **`Path`** header and `trade` allow list). |
-| `authz.disabled_2fa` | Account must enable 2FA for API key use. |
+# API Errors
 
-Common HTTP status codes:
+These errors occur after authentication succeeds.
 
-| HTTP status | Typical meaning |
-|-------------|-----------------|
-| 400 | Bad request (invalid parameters). |
-| 403 | Forbidden (action not allowed for this key—for example withdraw via API). |
-| 404 | Resource not found. |
-| 429 | Rate limited. |
-| 500 | Server error—retry later. |
+
+## Account & Balance
+
+| Error                          | Description                     |
+|--------------------------------|---------------------------------|
+| `account.insufficient_balance` | Account balance is insufficient |
+| `account.missing_currency`     | Currency parameter is missing   |
+
+
+## Orders (Place / Cancel)
+
+| Error                                 | Description                                |
+|---------------------------------------|--------------------------------------------|
+| `order.insufficient_balance`          | Not enough balance to place an order       |
+| `order.invalid_volume_or_price`       | Order price or volume is invalid           |
+| `order.insufficient_market_liquidity` | Not enough liquidity in the market         |
+| `order.create_error`                  | Failed to create order                     |
+| `order.cancel_error`                  | Failed to cancel order                     |
+| `order.invalid_state`                 | Order cannot be processed in current state |
 
 ---
 
-## WebSocket (WS) Response Processing
+##  Public APIs
 
-When using WebSocket APIs, you should first handle the response to your subscription request.
+| Error                       | Description                |
+|-----------------------------|----------------------------|
+| `public.market.not_found`   | Market does not exist      |
+| `public.currency.not_found` | Currency does not exist    |
+| `public.invalid_limit`      | Limit parameter is invalid |
 
-After sending a subscription request, the server returns a confirmation message:
+
+## WebSocket (WS)
+
+After subscribing:
 
 ```json
 {
@@ -79,25 +119,11 @@ After sending a subscription request, the server returns a confirmation message:
     "streams": ["btcusdt.trades"]
   }
 }
+
+
 ```
-4. After a successful subscription, the server **pushes** updates; handle each message according to the stream type (see **Spot → WebSocket** in the navbar).
 
----
-
-## Application error codes
-
-Non-zero `code` values are exchange-specific. Document or log the pair `(code, message)` when integrating. Typical categories include:
-
-- Authentication / signature / timestamp  
-- Invalid market or precision  
-- Insufficient balance  
-- Order rejected or not found  
-- Rate limiting
-
-Refer to your server’s latest error catalog if published separately.
-
----
-
+If the subscription fails, an error message will be returned instead.
 ## Related
 
 

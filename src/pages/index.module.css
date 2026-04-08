@@ -18,4 +18,106 @@
   .hero__subtitle {
     font-size: 1.05rem;
   }
+}/* Main heading */
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Subheading */
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Optional: smaller sections */
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* HERO */
+.heroBanner {
+  padding: 100px 0 70px;
+  text-align: center;
+}
+
+/* Title */
+.heroTitle {
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+  text-align: center !important;
+}
+
+/* First line */
+.heroSubtitle {
+ 
+  max-width: 950px;
+  margin: 0 auto 14px;
+  font-size: 16px;
+  
+  line-height: 1.7;
+}
+
+/* Second line */
+.heroDescription {
+  
+  max-width: 950px;
+  margin: 0 auto;
+  font-size: 14.5px;
+  
+  line-height: 1.7;
+}
+
+/* Add spacing before cards */
+.heroBanner + main {
+  margin-top: 20px;
+}
+
+.footer {
+  background: #1f2937;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footerTitle {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 16px;
+  
+  text-align: center !important;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 20px;
+}
+
+.socials img {
+  width: 26px;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.socials img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.divider {
+  width: 60%;
+  margin: 0 auto 16px;
+  border-top: 1px solid #374151;
+}
+
+.copy {
+  color: #9ca3af;
+  font-size: 14px;
+  
+  text-align: center !important;
 }

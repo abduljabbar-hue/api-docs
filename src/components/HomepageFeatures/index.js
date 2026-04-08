@@ -4,55 +4,63 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'User Manual (Getting Started)',
+    title: 'User Manual',
+   
     description: (
       <>
-        Start here if you are new to Wibeex. This section guides you through 
-        creating an account, completing verification, and generating your API keys.
+        Start here if you are new to Wibeex. Learn account setup,
+        verification, and API key generation.
+
         <br /><br />
-        You will also learn how authentication works, how to sign requests, and 
-        how to safely use your API credentials.
+        Understand authentication, request signing, and how to safely
+        use API credentials.
+
         <br /><br />
-        👉 Recommended first step before using any API.
+        <span className={styles.note}>👉 Recommended first step</span>
       </>
     ),
   },
   {
-    title: 'Public APIs (No Authentication)',
+    title: 'Public APIs',
+ 
     description: (
       <>
-        Access real-time market data without authentication. This includes 
-        markets, tickers, and pricing information.
+        Access real-time market data including tickers, markets,
+        and pricing without authentication.
+
         <br /><br />
-        These endpoints are useful for building dashboards, charts, or 
-        tracking market activity.
+        Perfect for dashboards, charts, and tracking market activity.
+
         <br /><br />
-        👉 No API key required.
+        <span className={styles.note}>👉 No API key required</span>
       </>
     ),
   },
   {
-    title: 'Authenticated APIs (Trading & Account)',
+    title: 'Authenticated APIs',
+   
     description: (
       <>
-        Perform actions on behalf of a user using API key authentication.
+        Execute trades, manage balances, and access user data
+        using API key authentication.
+
         <br /><br />
-        This includes placing orders, cancelling orders, checking balances, 
-        and retrieving user profile information.
+        Includes orders, cancellations, balances, and profiles.
+
         <br /><br />
-        👉 Requires API key + signed requests.
+        <span className={styles.note}>👉 Requires API key</span>
       </>
     ),
   },
 ];
 
-function Feature({title, description}) {
+function Feature({title, description, icon}) {
   return (
-    <div className={clsx('col', styles.feature)}>
-      <div className="">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+    <div className={styles.card}>
+      <div className={styles.icon}>{icon}</div>
+
+      <Heading as="h3">{title}</Heading>
+      <p>{description}</p>
     </div>
   );
 }
@@ -62,20 +70,11 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <div className="container">
 
-        {/* 👇 Top Intro (THIS is the missing piece) */}
-        <div style={{ marginBottom: '85px', textAlign: 'left' }}>
-         
-        </div>
-
-        {/* 👇 Feature sections */}
-        <div className="row  ">
+        {/* Feature Cards */}
+        <div className={styles.grid}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
-        </div>
- {/* 👇 Top Intro (THIS is the missing piece) */}
-        <div style={{ marginBottom: '119px', textAlign: 'left' }}>
-         
         </div>
 
       </div>

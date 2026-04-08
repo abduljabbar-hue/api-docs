@@ -11,15 +11,11 @@ Each data point represents market activity within a specific time interval.
 
 
 
----
-
 ## HTTP Request
 
 ```
 GET /api/v2/peatio/public/markets/:market/k-line
 ```
-
----
 
 ## Request Parameters
 
@@ -31,7 +27,6 @@ GET /api/v2/peatio/public/markets/:market/k-line
 | time_to | false | integer | Unix timestamp (seconds). If set, only K-line data **before this time** will be returned. |
 | limit | false | integer | Maximum number of returned data points. Default `30`.Range `1–10000`. Ignored if `time_from` and `time_to` are provided. |
 
----
 
 ## Response Fields
 
@@ -44,7 +39,6 @@ GET /api/v2/peatio/public/markets/:market/k-line
 | close | string | Closing price |
 | volume | string | Trading volume during the interval |
 
----
 
 ## Example Request
 
@@ -77,8 +71,6 @@ curl "https://wibeex.com/api/v2/peatio/public/markets/btcusdt/k-line?period=1&ti
     ]
 ]    
 ```
-
----
 
 ## Notes
 

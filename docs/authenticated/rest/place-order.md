@@ -18,7 +18,6 @@ Private trading endpoints are limited per API key. See [Rate limits](../../rate-
 
 :::
 
----
 
 ## HTTP request
 
@@ -34,14 +33,13 @@ POST /api/v2/peatio/market/orders
 | market | **true** | string | Market id (for example `btcusdt`). Use ids from [Markets](../../spot/rest/markets.md). |
 | side | **true** | string | Order side: `buy` or `sell`. |
 | volume | **true** | string | Order amount in **base currency** units (string decimal). |
-| ord_type | **true** | string | Order type: commonly `limit` or `market`. |
+| ord_type | **true** | string | Order type: `limit` or `market`. |
 | price | false | string | Limit price (quote currency). Required for **`limit`** orders; omit for typical **`market`** orders. |
 
----
 
 ## Response fields
 
-Successful responses use the unified envelope (`code`, `data`, `message`). The `data` object is usually a **order** record, for example:
+Successful responses use the unified envelope (`code`, `data`, `message`). The `data` object is a **order** record, for example:
 
 | Field | Type | Description |
 |-------|------|-------------|
@@ -55,12 +53,10 @@ Successful responses use the unified envelope (`code`, `data`, `message`). The `
 | state | string | e.g. `wait`, `done`, `cancel` |
 | created_at | string | Creation time (deployment-specific format) |
 
----
 
 ## Example request
 see [place order example](/docs/authentication.md#javascript-example-place-order---post)
 
----
 
 ## Example response
 
@@ -90,9 +86,6 @@ see [place order example](/docs/authentication.md#javascript-example-place-order
  
 ```
 
----
-
 ## Notes
 
-- Typical **`trade`** keys are restricted to documented private paths; do not assume access to other Peatio routes.
-- If `code !== 0`, treat as a business error—see [Error handling](../../error-handling.md).
+- If the request fails, see [Error handling](../../error-handling.md).

@@ -11,15 +11,12 @@ By default, trades are returned in **descending order (latest first)**.
 
 
 
----
-
 ## HTTP Request
 
 ```
 GET /api/v2/peatio/public/markets/:market/trades
 ```
 
----
 
 ## Request Parameters
 
@@ -28,8 +25,6 @@ GET /api/v2/peatio/public/markets/:market/trades
 | market | true | string | Market identifier (example: `btcusdt`) |
 | page | false | integer | Page number for paginated results. Must be greater than `0`. Default `1`. |
 
-
----
 
 ## Response Fields
 
@@ -46,15 +41,13 @@ GET /api/v2/peatio/public/markets/:market/trades
 | order_id | object/null | Order identifier (currently not populated) |
 | is_buyer | boolean/null | Indicates if buyer side (currently not populated) |
 | side | string | Trade side (`buy` or `sell`) |
----
+
 
 ## Example Request
 
 ```bash
 curl "https://wibeex.com/api/v2/peatio/public/markets/btcusdt/trades?page=1"
 ```
-
----
 
 ## Example Response
 
@@ -89,7 +82,6 @@ curl "https://wibeex.com/api/v2/peatio/public/markets/btcusdt/trades?page=1"
 ]
 ```
 
----
 
 ## Notes
 

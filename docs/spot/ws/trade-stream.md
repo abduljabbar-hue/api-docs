@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Receive real-time trade updates for a specific market.
 
----
+
 
 ## Stream Name
 
@@ -20,7 +20,6 @@ Example:
 btcusdt.trades
 ```
 
----
 
 ## Subscribe Example
 
@@ -28,7 +27,6 @@ btcusdt.trades
 wss://wibeex.com/api/v2/ranger/public/?stream=btcusdt.trades
 ```
 
----
 
 ## Example Response
 
@@ -48,7 +46,6 @@ wss://wibeex.com/api/v2/ranger/public/?stream=btcusdt.trades
 }
 ```
 
----
 
 ## Notes
 

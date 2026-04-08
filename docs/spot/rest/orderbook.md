@@ -12,7 +12,7 @@ This endpoint allows applications to view the current market depth and liquidity
 
 
 
----
+
 
 ## HTTP Request
 
@@ -20,7 +20,6 @@ This endpoint allows applications to view the current market depth and liquidity
 GET /api/v2/peatio/public/markets/:market/order-book
 ```
 
----
 
 ## Request Parameters
 
@@ -30,7 +29,7 @@ GET /api/v2/peatio/public/markets/:market/order-book
 | asks_limit | false | integer | Limit the number of returned sell orders. Range `1-200`. Default `20`. |
 | bids_limit | false | integer | Limit the number of returned buy orders. Range `1-200`. Default `20`. |
 
----
+
 
 ## Response Fields
 
@@ -39,7 +38,7 @@ GET /api/v2/peatio/public/markets/:market/order-book
 | asks | array | List of sell orders |
 | bids | array | List of buy orders |
 
----
+
 
 ## Example Request
 
@@ -47,7 +46,6 @@ GET /api/v2/peatio/public/markets/:market/order-book
 curl "https://wibeex.com/api/v2/peatio/public/markets/btcusdt/order-book?bids_limit=1&asks_limit=1"
 ```
 
----
 
 ## Example Response
 
@@ -104,7 +102,6 @@ curl "https://wibeex.com/api/v2/peatio/public/markets/btcusdt/order-book?bids_li
 }
 ```
 
----
 
 ## Notes
 

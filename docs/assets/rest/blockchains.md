@@ -8,9 +8,7 @@ Retrieve all supported blockchain networks on the exchange.
 
 This endpoint returns a list of blockchain networks supported for deposits and withdrawals.
 
-This is a **public endpoint**.
 
----
 
 ## HTTP Request
 
@@ -18,15 +16,12 @@ This is a **public endpoint**.
 GET /api/v2/peatio/public/blockchain/networks
 ```
 
----
-
 ## Example Request
 
 ```bash
 curl https://wibeex.com/api/v2/peatio/public/blockchain/networks
 ```
 
----
 
 ## Example Response
 
@@ -39,7 +34,6 @@ curl https://wibeex.com/api/v2/peatio/public/blockchain/networks
 ]
 ```
 
----
 
 ## Notes
 

@@ -4,13 +4,11 @@ sidebar_position: 1
 
 # Member Levels
 
-Retrieve the minimum member level required for deposit, withdrawal, and trading actions.
+Retrieve the minimum member level required for deposit, withdrawal, and trading.
 
-This endpoint allows applications to determine the required account verification level before performing specific operations.
+This endpoint helps determine the required account verification level for different operations.
 
-This is a **public endpoint**.
 
----
 
 ## HTTP Request
 
@@ -18,7 +16,7 @@ This is a **public endpoint**.
 GET api/v2/peatio/public/member-levels
 ```
 
----
+
 
 ## Response Fields
 
@@ -28,7 +26,7 @@ GET api/v2/peatio/public/member-levels
 | withdraw.minimum_level | integer | Minimum member level required to withdraw |
 | trading.minimum_level | integer | Minimum member level required to trade |
 
----
+
 
 ## Example Request
 
@@ -36,7 +34,7 @@ GET api/v2/peatio/public/member-levels
 curl https://wibeex.com/api/v2/peatio/public/member-levels
 ```
 
----
+
 
 ## Example Response
 
@@ -54,9 +52,9 @@ curl https://wibeex.com/api/v2/peatio/public/member-levels
 }
 ```
 
----
+
 
 ## Notes
 
-- Member levels correspond to the user's account verification or KYC level.
+- Member levels are based on user verification status, including phone number, email, and KYC.
 - Some operations may require higher levels depending on exchange policy.

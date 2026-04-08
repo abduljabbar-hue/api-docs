@@ -9,16 +9,12 @@ Retrieve a list of all supported currencies on the exchange.
 The Currencies API provides detailed information about supported currencies.
 
 
----
-
 ## HTTP Request
 
 ```
 GET /api/v2/peatio/public/currencies
 ```
 
-
----
 
 ## Query Parameters
 
@@ -29,7 +25,6 @@ GET /api/v2/peatio/public/currencies
 | search.code | false | string | Search by currency code (SQL LIKE) |
 | search.name | false | string | Search by currency name (SQL LIKE) |
 
----
 
 ## Response Fields
 
@@ -57,7 +52,6 @@ GET /api/v2/peatio/public/currencies
 | min_redemption_amount | number | Minimum redemption amount |
 | deposit_reward_amount | string | Deposit reward amount |
 
----
 
 ### networks (array object)
 
@@ -80,7 +74,6 @@ GET /api/v2/peatio/public/currencies
 | explorer_transaction | string | Transaction explorer URL template |
 | explorer_address | string | Address explorer URL template |
 
----
 
 ## Example Request
 
@@ -135,7 +128,7 @@ curl https://wibeex.com/api/v2/peatio/public/currencies?type=coin&search[code]=b
 ]
 ```
 
----
+
 
 ## Notes
 

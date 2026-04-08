@@ -13,15 +13,12 @@ This endpoint returns lists of **ask (sell)** and **bid (buy)** price levels fro
 
 
 
----
-
 ## HTTP Request
 
 ```
 GET /api/v2/peatio/public/markets/:market/depth
 ```
 
----
 
 ## Request Parameters
 
@@ -30,7 +27,6 @@ GET /api/v2/peatio/public/markets/:market/depth
 | market | true | string | Market identifier (example: `btcusdt`) |
 | limit | false | integer | Maximum number of price levels to return. Range `1-1000`. Default `800`. |
 
----
 
 ## Response Fields
 
@@ -39,15 +35,12 @@ GET /api/v2/peatio/public/markets/:market/depth
 | timestamp | integer | Unix timestamp of the response |
 | asks | array | List of sell price levels `[price, volume]` |
 | bids | array | List of buy price levels `[price, volume]` |
----
 
 ## Example Request
 
 ```bash
 curl https://wibeex.com/api/v2/peatio/public/markets/btcusdt/depth?limit=2
 ```
-
----
 
 ## Example Response
 
@@ -65,7 +58,6 @@ curl https://wibeex.com/api/v2/peatio/public/markets/btcusdt/depth?limit=2
 }
 ```
 
----
 
 ## Notes
 

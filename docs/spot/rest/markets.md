@@ -23,7 +23,7 @@ GET /api/v2/peatio/public/markets
 | page | false | integer | Page number for pagination |
 | limit | false | integer | Number of records per page |
 
----
+
 
 ## Response Fields
 
@@ -50,7 +50,7 @@ GET /api/v2/peatio/public/markets
 | st_enabled_at | integer/null | Timestamp when ST was enabled |
 | aggregator_data | object | Additional external data info |
 
----
+
 
 ## Example Request
 
@@ -58,7 +58,7 @@ GET /api/v2/peatio/public/markets
 curl https://wibeex.com/api/v2/peatio/public/markets?limit=1&page=3
 ```
 
----
+
 
 ## Example Response
 
@@ -90,7 +90,6 @@ curl https://wibeex.com/api/v2/peatio/public/markets?limit=1&page=3
 ]
 ```
 
----
 
 ## Notes
 

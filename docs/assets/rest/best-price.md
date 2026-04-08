@@ -10,15 +10,12 @@ This endpoint calculates the best available conversion price between two assets.
 
 This is a **public endpoint**.
 
----
-
 ## HTTP Request
 
 ```
 POST /api/v2/peatio/public/currencies/best_price
 ```
 
----
 
 ## Request Parameters
 
@@ -26,8 +23,6 @@ POST /api/v2/peatio/public/currencies/best_price
 |----------|----------|------|-------------|
 | from_currency | true | string | Source currency code |
 | to_currency | true | string | Target currency code |
-
----
 
 ## Example Request
 
@@ -40,8 +35,6 @@ curl -X POST https://wibeex.com/api/v2/peatio/public/currencies/best_price \
       }'
 ```
 
----
-
 ## Example Response
 
 ```json
@@ -49,8 +42,6 @@ curl -X POST https://wibeex.com/api/v2/peatio/public/currencies/best_price \
   "price": "62450.25"
 }
 ```
-
----
 
 ## Notes
 

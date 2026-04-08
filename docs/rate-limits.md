@@ -4,11 +4,9 @@ sidebar_position: 6
 
 # Rate limits
 
-Wibeex applies rate limits to protect platform stability and fair usage. Limits may differ by **IP address**, **API key**, and **endpoint group** (public market data vs signed trading).
+Wibeex applies rate limits to protect platform stability and fair usage. Limits may differ by **IP address**, **API key**, and **endpoint group**.
 
-Exact numeric limits can change; treat the values below as **documentation defaults** until your dashboard or operations team publishes firm quotas.
 
----
 
 ## HTTP (REST)
 
@@ -20,7 +18,6 @@ Exact numeric limits can change; treat the values below as **documentation defau
 
 If you receive **HTTP 429**, reduce request frequency, cache responses where possible, and use WebSockets for continuous data.
 
----
 
 ## WebSocket
 
@@ -28,7 +25,6 @@ If you receive **HTTP 429**, reduce request frequency, cache responses where pos
 - Reconnect with **exponential backoff** if disconnected.  
 - Avoid opening a large number of parallel connections from the same IP without approval.
 
----
 
 ## Best practices
 
@@ -36,13 +32,11 @@ If you receive **HTTP 429**, reduce request frequency, cache responses where pos
 - Cache **static** metadata (markets, currencies) with a reasonable TTL.  
 - Use **batch** or **all-markets** endpoints where available (for example global tickers) instead of many per-market calls.
 
----
 
 ## Contact
 
 If you need higher limits for market making or institutional connectivity, contact Wibeex support through the website.
 
----
 
 ## Related
 

@@ -1,46 +1,48 @@
 ---
 sidebar_position: 1
 ---
-
 # API introduction
 
-Welcome to the **Wibeex API documentation**. 
+Welcome to the Wibeex API documentation.
 
-This documentation aims to provide developers with detailed information on how to integrate and interact with the **Wibeex** exchange.
+This guide helps you understand how to connect and work with the Wibeex exchange.
 
-Wibeex offers user  public apis anyone can access about spot and listed currencies and markets and authencated apis to place spot order and cancel it and get user profile details on wibeex to build trading applications to run on wibeex.
+Wibeex provides simple and flexible APIs, so you can build trading apps, automate strategies, or create your own tools easily.
 
 ## API Documentation structure
 Our API documentation is organized according to the following structures:
 
 | Section | Description |
 |---------|-------------|
-| **API introduction** |Provides an overall introduction to the API, document organization, and related materials (including demo). |
-| **Integration guide** | Describes how to proceed with the entire access process to integrate a wibeex api in you application . |
-| **Create API key** | Guides to create an api key on wibeex require parameteres and process to an api key. |
-| **Rate limits** |Provides detailed information on the function, usage and sample code of each API endpoint. |
-| **Error handling** | Lists common error codes and corresponding error handling methods. |
-
+| **API Introduction** | Gives a simple overview of the API, how the docs are organized(including [code examples](/docs/authentication.md#javascript-exampleget-balances)). |
+| **Integration Guide** | Explains how to connect and start using the Wibeex API step by step. |
+| **Authentication** | Shows how to create an API key and securely access the API. |
+| **Rate Limits** | Explains usage limits and how often you can call each API. |
+| **Error Handling** | Lists common errors and how to handle them. |
 
 ## API Base URL
 
-Wibeex provides services through **HTTP protocol** and **WebSockets protocol**.  
-The base URLs for accessing these services are as follows:
+Wibeex provides services through **HTTP protocol** and **WebSockets protocol**. The base URLs for accessing these services are as follows:
 
-> ℹ️ **INFO**
+:::info
 
-- **HTTP Base URL**  
-  https://wibeex.com/api/v2/peatio  
-  https://wibeex.com/api/v2/barong  
+The base URL of HTTP is:  
+`  https://wibeex.com/api/v2/peatio  `
 
-- **WebSocket Base URL**  
-  wss://wibeex.com/api/v2/peatio/public
+`https://wibeex.com/api/v2/barong`
+  
+
+The base URL for WebSocket is as follows:
+
+- Public: `wss://wibeex.com/api/v2/peatio/public`
+
+:::
 
 
 ## Module grouping
 Wibeex API is grouped in public apis and authenticated apis specific grouping is as follows. 
 
-### 1. Public API Reference
+### 1. Public APIs
 
 <table>
   <thead>
@@ -161,22 +163,22 @@ Wibeex API is grouped in public apis and authenticated apis specific grouping is
 
 ## Related Resources
 
-Before using the Wibeex Exchange API, you may need to be familiar with the following resources:
+Before using the Wibeex Exchange API, you may want to review the following resources:
 
-- **API Documentation**  
-  Provides detailed information about each API endpoint, including request methods, parameters, and response results.
+- [**API Documentation**](#api-introduction) 
+  : Detailed information about API endpoints, including request methods, parameters, and responses.
 
-- **API Management Console**  
-  Offers functionality to generate, manage, and set permissions for API keys.  
-  Access it here: https://wibeex.com/api-management
+- [**API Management Console**](https://wibeex.com/api-management) 
+  : Create and manage your API keys and permissions.  
 
-- **Code Examples**  
-  JavaScript examples for quick integration.  
-  [Place Order Example](/docs/authentication#javascript-example-place-order---post)
+- [**Code Examples**](/docs/authentication.md#javascript-example) 
+  : Simple JavaScript examples to help you get started quickly:  
+  - [Place Order](/docs/authentication#javascript-example-place-order---post)  
+  - [Get Balances](/docs/authentication#javascript-example)  
+  - [Cancel Order](/docs/authentication#javascript-example-cancel-order---post)
 
-  [Get Request Example](/docs/authentication.md#javascript-example)
 
-  [Cancel Order Example](/docs/authentication.md#javascript-example-cancel-order---post)
+
 ## Support and Feedback
 
 If you encounter any issues or need further assistance while using the API, feel free to contact the Wibeex Support Team. We are always ready to assist you and provide guidance throughout your development process.

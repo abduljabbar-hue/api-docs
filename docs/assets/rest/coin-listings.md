@@ -9,15 +9,11 @@ Retrieve a list of available coin listings on the exchange.
 This endpoint returns information about coins that are visible and available on the platform.
 
 
----
-
 ## HTTP Request
 
 ```
 GET /api/v2/peatio/public/coin_listings/listing
 ```
-
----
 
 ## Query Parameters
 
@@ -26,8 +22,6 @@ GET /api/v2/peatio/public/coin_listings/listing
 | network | false | string | Filter listings by blockchain network |
 | page | false | integer | Page number for paginated results |
 | limit | false | integer | Number of records per page |
-
----
 
 ## Response Fields
 
@@ -64,7 +58,6 @@ GET /api/v2/peatio/public/coin_listings/listing
 | token_usd_price | string | Token price in USD |
 | metadata | object | Additional project metadata |
 
----
 
 ### metadata (object)
 
@@ -75,15 +68,12 @@ GET /api/v2/peatio/public/coin_listings/listing
 | tokenomics | string | Tokenomics document URL |
 | incorporation_documents | string | Legal documents |
 
----
 
 ## Example Request
 
 ```bash
 curl "https://wibeex.com/api/v2/peatio/public/coin_listings/listing?network=bsc-mainnet&page=1&limit=1"
 ```
-
----
 
 ## Example Response
 
@@ -138,7 +128,6 @@ curl "https://wibeex.com/api/v2/peatio/public/coin_listings/listing?network=bsc-
 ]
 ```
 
----
 
 ## Notes
 

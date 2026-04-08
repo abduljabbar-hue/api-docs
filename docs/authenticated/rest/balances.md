@@ -18,7 +18,6 @@ Private endpoints—see [Rate limits](../../rate-limits.md).
 
 :::
 
----
 
 ## HTTP request
 
@@ -60,8 +59,6 @@ GET /api/v2/peatio/account/balances
 | exchange_currency_id | string \| null | Exchange currency reference |
 | alchemy_currency | string \| null | External integration reference (if applicable) |
 
-
----
 
 ## Example request
 

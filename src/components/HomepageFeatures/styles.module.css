@@ -1,0 +1,64 @@
+.features {
+  padding: 10px 0 135px;
+}
+
+/* Better grid spacing */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 0px 100px;
+}
+
+/* Card */
+.card {
+  background: linear-gradient(180deg, #111827 0%, #0b1220 100%);
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.25s ease;
+  height: 92%; /* 👈 equal height cards */
+  
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #00e0b8;
+  box-shadow: 0 10px 30px rgba(0, 224, 184, 0.08);
+}
+
+/* Icon */
+.icon {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+/* Title */
+.card h3 {
+  color: #fff;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+/* Text */
+.card p {
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* Highlight note */
+.note {
+  display: inline-block;
+  margin-top: 12px;
+  color: #00e0b8;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 996px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

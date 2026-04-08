@@ -8,9 +8,8 @@ Retrieve information for a specific currency.
 
 This endpoint returns detailed information about a currency including deposit and withdrawal availability.
 
-This is a **public endpoint**.
 
----
+
 
 ## HTTP Request
 
@@ -18,7 +17,6 @@ This is a **public endpoint**.
 GET /api/v2/peatio/public/currencies/:id
 ```
 
----
 
 ## Path Parameters
 
@@ -26,7 +24,7 @@ GET /api/v2/peatio/public/currencies/:id
 |----------|----------|------|-------------|
 | id | true | string | Currency code (for example `btc`, `eth`, `usdt`) |
 
----
+
 ## Response Fields
 
 ### currency (object)
@@ -53,7 +51,6 @@ GET /api/v2/peatio/public/currencies/:id
 | min_redemption_amount | number | Minimum redemption amount |
 | deposit_reward_amount | string | Reward amount for deposits |
 
----
 
 ### networks (array object)
 
@@ -66,7 +63,7 @@ GET /api/v2/peatio/public/currencies/:id
 curl https://wibeex.com/api/v2/peatio/public/currencies/btc
 ```
 
----
+
 
 ## Example Response
 
@@ -94,7 +91,6 @@ curl https://wibeex.com/api/v2/peatio/public/currencies/btc
 }
 ```
 
----
 
 ## Notes
 

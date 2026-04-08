@@ -10,7 +10,7 @@ This endpoint returns aggregated market data including price, volume, and 24-hou
 
 
 
----
+
 
 ## HTTP Request
 
@@ -18,7 +18,7 @@ This endpoint returns aggregated market data including price, volume, and 24-hou
 GET /api/v2/peatio/public/summary
 ```
 
----
+
 
 ## Response Fields
 
@@ -34,7 +34,7 @@ GET /api/v2/peatio/public/summary
 | highest_price_24h | string | Highest price during the last 24 hours |
 | lowest_price_24h | string | Lowest price during the last 24 hours |
 
----
+
 
 ## Example Request
 
@@ -42,7 +42,7 @@ GET /api/v2/peatio/public/summary
 curl https://wibeex.com/api/v2/peatio/public/summary
 ```
 
----
+
 
 ## Example Response
 
@@ -73,7 +73,7 @@ curl https://wibeex.com/api/v2/peatio/public/summary
 ]
 ```
 
----
+
 
 ## Notes
 

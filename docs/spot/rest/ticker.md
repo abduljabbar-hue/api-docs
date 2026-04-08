@@ -17,7 +17,7 @@ This endpoint returns the latest trading statistics including price, volume, and
 GET /api/v2/peatio/public/markets/:market/tickers
 ```
 
----
+
 
 ## Path Parameters
 
@@ -25,7 +25,7 @@ GET /api/v2/peatio/public/markets/:market/tickers
 |----------|----------|------|-------------|
 | market | true | string | Market identifier (example: `btcusdt`) |
 
----
+
 
 ## Response Fields
 
@@ -43,7 +43,7 @@ GET /api/v2/peatio/public/markets/:market/tickers
 | vol | string | Alias of volume |
 | avg_price | string | Average price |
 | price_change_percent | string | 24h price change percentage |
----
+
 
 ## Example Request
 
@@ -51,7 +51,6 @@ GET /api/v2/peatio/public/markets/:market/tickers
 curl https://wibeex.com/api/v2/peatio/public/markets/btcusdt/tickers
 ```
 
----
 
 ## Example Response
 
@@ -74,8 +73,6 @@ curl https://wibeex.com/api/v2/peatio/public/markets/btcusdt/tickers
     }
 }
 ```
-
----
 
 ## Notes
 

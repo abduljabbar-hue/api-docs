@@ -9,7 +9,7 @@ Retrieve information about all tradable assets on the exchange.
 This endpoint returns asset metadata including deposit and withdrawal availability, withdrawal limits, and supported smart contract addresses.
 
 
----
+
 
 ## HTTP Request
 
@@ -17,7 +17,6 @@ This endpoint returns asset metadata including deposit and withdrawal availabili
 GET /api/v2/peatio/public/assets
 ```
 
----
 
 ## Response Fields
 
@@ -30,7 +29,7 @@ GET /api/v2/peatio/public/assets
 | max_withdraw | string | Maximum withdrawal amount |
 | contractAddress | array | List of supported smart contract addresses |
 
----
+
 
 ## Example Request
 
@@ -38,7 +37,7 @@ GET /api/v2/peatio/public/assets
 curl https://wibeex.com/api/v2/peatio/public/assets
 ```
 
----
+
 
 ## Example Response
 
@@ -66,7 +65,7 @@ curl https://wibeex.com/api/v2/peatio/public/assets
 }
 ```
 
----
+
 
 ## Notes
 

@@ -9,23 +9,26 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+
   return (
-    <header className={clsx('hero ', styles.heroBanner)}>
+    <header className={styles.heroBanner}>
       <div className="container">
-        <Heading as="h1" className="hero__title text--center">
+
+        <Heading as="h1" className={styles.heroTitle}>
           {siteConfig.title}
         </Heading>
-        
-        <div className={styles.buttons}>
-             <p>
-            This documentation helps you integrate with the Wibeex exchange using REST APIs.
-            You can retrieve market data, manage accounts, and execute trades programmatically.
-         
-            The documentation is divided into three main sections below. 
-            If you are new, start with the <strong>User Manual</strong> to understand authentication 
-            and API key usage before moving to trading endpoints.
-          </p>
-        </div>
+
+        <p className={styles.heroSubtitle}>
+          Integrate with the Wibeex exchange using REST APIs to retrieve market data,
+          manage accounts, and execute trades programmatically.
+        </p>
+
+        <p className={styles.heroDescription}>
+          The documentation is divided into three main sections below.
+          If you're new, start with the <strong>User Manual</strong> to understand
+          authentication and API key usage before moving to trading endpoints.
+        </p>
+
       </div>
     </header>
   );
@@ -33,50 +36,33 @@ function HomepageHeader() {
 
 
 
- function Footer() {
+function Footer() {
   return (
-    <footer style={{
-      background: '#1f2937',
-      padding: '23px 0',
-      textAlign: 'center',
-      color: '#ccc'
-    }}>
+    <footer className={styles.footer}>
       
-      {/* Title */}
-      <p style={{ fontWeight: 600, marginBottom: '10px', color: '#fff' }}>
-        Keep in Contact!
-      </p>
+      <p className={styles.footerTitle}>Keep in Contact</p>
 
-      {/* Social Icons */}
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '25px', marginBottom: '20px' }}>
-        
+      <div className={styles.socials}>
         <a href="https://www.instagram.com/wibe_ex/" target="_blank">
-          <img src="https://stage-wibeex.s3.ap-southeast-1.amazonaws.com/insta.svg" width="26" />
+          <img src="https://stage-wibeex.s3.ap-southeast-1.amazonaws.com/insta.svg" />
         </a>
 
         <a href="https://t.me/wibeexenglish" target="_blank">
-          <img src="https://stage-wibeex.s3.ap-southeast-1.amazonaws.com/telegram.svg" width="26" />
+          <img src="https://stage-wibeex.s3.ap-southeast-1.amazonaws.com/telegram.svg" />
         </a>
 
         <a href="https://x.com/wibe_ex" target="_blank">
-          <img src="https://stage-wibeex.s3.ap-southeast-1.amazonaws.com/x.svg" width="26" />
+          <img src="https://stage-wibeex.s3.ap-southeast-1.amazonaws.com/x.svg" />
         </a>
 
         <a href="https://www.facebook.com/profile.php?id=61578853760526" target="_blank">
-          <img src="https://stage-wibeex.s3.ap-southeast-1.amazonaws.com/facebook.svg" width="26" />
+          <img src="https://stage-wibeex.s3.ap-southeast-1.amazonaws.com/facebook.svg" />
         </a>
-
       </div>
 
-      {/* Divider */}
-      <div style={{
-        width: '60%',
-        margin: '0 auto 15px',
-        borderTop: '1px solid #374151'
-      }} />
+      <div className={styles.divider} />
 
-      {/* Copyright */}
-      <p style={{ fontSize: '14px', color: '#9ca3af' }}>
+      <p className={styles.copy}>
         © {new Date().getFullYear()} Wibeex. All rights reserved.
       </p>
 

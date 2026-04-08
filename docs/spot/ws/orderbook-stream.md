@@ -8,7 +8,6 @@ The Wibeex WebSocket API allows clients to subscribe to real-time market and glo
 
 It provides low-latency updates for trades, tickers, order books, and global market data.
 
----
 
 ## Base URL
 wss://staging.wibeex.com/api/v2/ranger/public

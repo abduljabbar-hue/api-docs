@@ -6,7 +6,7 @@ sidebar_position: 4
 
 Receive ticker updates for a specific market.
 
----
+
 
 ## Stream Name
 
@@ -20,7 +20,7 @@ Example:
 btcusdt.ticker
 ```
 
----
+
 
 ## Subscribe Example
 
@@ -28,7 +28,7 @@ btcusdt.ticker
     wss://wibeex.com/api/v2/ranger/public/?stream=ethusdt.ticker
 ```
 
----
+
 
 ## Example Response
 
@@ -63,7 +63,6 @@ btcusdt.ticker
 }
 ```
 
----
 
 ## Notes
 

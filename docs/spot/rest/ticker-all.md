@@ -10,7 +10,6 @@ This endpoint returns the latest price, best bid/ask prices, volume information,
 
 
 
----
 
 ## HTTP Request
 
@@ -18,7 +17,7 @@ This endpoint returns the latest price, best bid/ask prices, volume information,
 GET /api/v2/peatio/public/markets/tickers
 ```
 
----
+
 
 ## Request Parameters
 
@@ -27,33 +26,27 @@ This endpoint does not require any parameters.
 
 ## Response Fields
 
-### market (object)
-| Parameter | Type | Description |
-|----------|------|-------------|
-| market | object | Market identifier as key (e.g. `btcusdt`, `aaveusdt`) |
+The response is a key-value map where each key is a **market identifier** (e.g. `btcusdt`, `aaveusdt`). Each value contains market data for that market.
+
+| Field | Type | Description |
+|------|------|-------------|
+| `<market_id>` | object | Market identifier as key (e.g. `btcusdt`, `aaveusdt`) |
 | at | integer | Timestamp of ticker data (Unix seconds) |
-| ticker | object | Ticker statistics for the market |
-
----
-
-### ticker (object)
-
-| Parameter | Type | Description |
-|----------|------|-------------|
-| last | string | Latest traded price |
-| open | string/number | Opening price for the 24h period |
-| buy | string | Current best bid price |
-| sell | string | Current best ask price |
-| low | string | Lowest price in the last 24h |
-| high | string | Highest price in the last 24h |
-| volume | string | Trading volume in the last 24h |
-| vol | string | Same as `volume` (duplicate field) |
-| total_volume | string | Total traded value (quote currency) |
-| total_volume_base_currency | string | Total traded volume in base currency |
-| avg_price | string | Average price during the 24h period |
-| price_change_percent | string | Percentage price change over 24h |
-| base_unit | string | Base currency (e.g. `btc`) |
-| quote_unit | string | Quote currency (e.g. `usdt`) |
+| ticker | object | Contains ticker statistics for the market |
+| ticker.last | string | Latest traded price |
+| ticker.open | string/number | Opening price for the 24h period |
+| ticker.buy | string | Current best bid price |
+| ticker.sell | string | Current best ask price |
+| ticker.low | string | Lowest price in the last 24h |
+| ticker.high | string | Highest price in the last 24h |
+| ticker.volume | string | Trading volume in the last 24h |
+| ticker.vol | string | Same as `volume` (duplicate field) |
+| ticker.total_volume | string | Total traded value (quote currency) |
+| ticker.total_volume_base_currency | string | Total traded volume in base currency |
+| ticker.avg_price | string | Average price during the 24h period |
+| ticker.price_change_percent | string | Percentage price change over 24h |
+| ticker.base_unit | string | Base currency (e.g. `btc`) |
+| ticker.quote_unit | string | Quote currency (e.g. `usdt`) |
 ## Example Request
 
 ```bash

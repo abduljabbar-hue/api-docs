@@ -18,7 +18,6 @@ Applies per API key. See [Rate limits](../../rate-limits.md).
 
 :::
 
----
 
 ## HTTP request
 
@@ -26,7 +25,6 @@ Applies per API key. See [Rate limits](../../rate-limits.md).
 POST /api/v2/peatio/market/orders/cancel
 ```
 
----
 
 ## Request parameters
 
@@ -35,7 +33,6 @@ POST /api/v2/peatio/market/orders/cancel
 | market | **true** | string | Market id (for example `btcusdt`). |
 | side | false | string | If set, cancels only `buy` or `sell` orders. |
 
----
 
 ## Response 
 
@@ -71,7 +68,6 @@ see code example to [cancel order](/docs/authentication.md#javascript-example-ca
 ]
 ```
 
----
 
 ## Notes
 
