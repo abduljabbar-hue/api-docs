@@ -8,7 +8,7 @@ Retrieve **spot** account balances for the authenticated user.
 
 :::info Authentication
 
-**Requires** signed requests . See [Authentication](../../authentication.md) and [Integration guide](../../integration-guide.md).
+**Requires** signed requests. See [Authentication](../../authentication.md) and [Integration guide](../../integration-guide.md).
 
 :::
 
@@ -29,10 +29,10 @@ GET /api/v2/peatio/account/balances
 
 | Parameter | Required | Type | Description |
 |-----------|----------|------|-------------|
-| hide_zero | false | string / boolean | If set, omit currencies with zero **available + locked** balance. |
-| name | string | String| Partial match on currency name (case-insensitive, e.g. `Ethe` → Ethereum) |
-| currency_code | false | string | Filter by currency **code** (`id`), e.g. `btc`. |
-| type | false | string | Currency type filter (deployment / Ransack; e.g. coin vs fiat). |
+| hide_zero     | false  | string / boolean | If set, omit currencies with zero **available + locked** balance. |
+| name          | false  | string | Partial match on currency name (case-insensitive, e.g. `Ethe` → Ethereum) |
+| currency_code | false  | string | Filter by currency **code** (`id`), e.g. `btc`. |
+| type          | false  | string | Currency type filter (deployment / Ransack; e.g. coin vs fiat). |
 
 
 
@@ -62,7 +62,7 @@ GET /api/v2/peatio/account/balances
 
 ## Example request
 
-see code example to [get user account balance](/docs//authentication.md#javascript-example)
+see code example to [get user account balance](/docs/authentication.md#javascript-example-get-balances)
 
 
 ## Example response

@@ -4,12 +4,12 @@ sidebar_position: 2
 
 # Integration Guide
 
-The following is a brief introduction to quickly get started using the API services in this centralized cryptocurrency exchange:
+This guide helps you quickly get started with the Wibeex API.
 
 
 ## Get API Key
 
-Before applying for an API key, you need to apply for an account at Wibeex. If you need assistance, you can contact support using the chat icon available at the bottom-right corner of the Wibeex website.
+Before applying for an API key, you need to create an account at Wibeex. If you need assistance, you can contact support using the chat icon available at the bottom-right corner of the Wibeex website.
 
 Once you have your account ready, you can generate the API key in [Developer console](https://wibeex.com/login?redirect=/api-management) to ensure that you have the necessary permissions.
 
@@ -43,7 +43,7 @@ The base URL for public REST, private Peatio, Barong, and WebSocket are differen
 
 :::
 
-## Public Parameters
+## Authentication parameters
 
 :::info
 
@@ -104,7 +104,7 @@ Example:
 ```
 
 
-For specific error explanations, please refer to Error Handling [./error-handling.md](/docs/error-handling.md).
+For detailed error descriptions, please refer to Error Handling [./error-handling.md](/docs/error-handling.md).
 
 ### WebSocket Response Processing
 
@@ -124,7 +124,7 @@ After sending a subscription request, the server returns a confirmation message:
 
 After a successful subscription, the server will push the data when it is updated, and the pushed data can be processed according to your needs.
 
-For specific error explanations, please refer to Error Handling [./error-handling.md](/docs/error-handling.md)..
+For specific error explanations, please refer to Error Handling [./error-handling.md](/docs/error-handling.md).
 
 
 

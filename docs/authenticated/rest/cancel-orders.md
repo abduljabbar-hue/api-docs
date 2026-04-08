@@ -8,7 +8,7 @@ Cancel **open** orders on a market.
 
 :::info Authentication
 
-This endpoint **requires** API key signing . See [Authentication](../../authentication.md) and [Integration guide](../../integration-guide.md).
+This endpoint **requires** API key signing. See [Authentication](../../authentication.md) and [Integration guide](../../integration-guide.md).
 
 :::
 
@@ -48,7 +48,7 @@ Returns an **array of order objects**:
 ## Example request
 
 
-see code example to [cancel order](/docs/authentication.md#javascript-example-cancel-order---post)
+see code example to [cancel order](/docs/authentication.md#javascript-example-cancel-order)
 
 
 ## Example response

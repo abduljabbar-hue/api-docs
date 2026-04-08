@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 ---
-# API introduction
+# API Introduction
 
 Welcome to the Wibeex API documentation.
 
@@ -9,12 +9,12 @@ This guide helps you understand how to connect and work with the Wibeex exchange
 
 Wibeex provides simple and flexible APIs, so you can build trading apps, automate strategies, or create your own tools easily.
 
-## API Documentation structure
-Our API documentation is organized according to the following structures:
+## Documentation structure
+Wibeex APIs are grouped into public APIs and authenticated APIs as follows.
 
 | Section | Description |
 |---------|-------------|
-| **API Introduction** | Gives a simple overview of the API, how the docs are organized(including [code examples](/docs/authentication.md#javascript-exampleget-balances)). |
+| **API Introduction** | Gives a simple overview of the API, how the docs are organized (including [code examples](/docs/authentication.md#javascript-example-get-balances)). |
 | **Integration Guide** | Explains how to connect and start using the Wibeex API step by step. |
 | **Authentication** | Shows how to create an API key and securely access the API. |
 | **Rate Limits** | Explains usage limits and how often you can call each API. |
@@ -34,13 +34,13 @@ The base URL of HTTP is:
 
 The base URL for WebSocket is as follows:
 
-- Public: `wss://wibeex.com/api/v2/peatio/public`
+- Public: `wss://wibeex.com/api/v2/ranger/public`
 
 :::
 
 
 ## Module grouping
-Wibeex API is grouped in public apis and authenticated apis specific grouping is as follows. 
+Wibeex API is grouped in public APIs and authenticated APIs grouping is as follows. 
 
 ### 1. Public APIs
 
@@ -123,12 +123,12 @@ Wibeex API is grouped in public apis and authenticated apis specific grouping is
     <tr>
       <td rowspan="1"><b>Accounts</b></td>
       <td>Member Levels</td>
-      <td>User level based on trading activity</td>
+      <td>User verification level (e.g., KYC verification, 2FA enabled).</td>
     </tr>
   </tbody>
 </table>
 
-### 2.  Authenticated API 
+### 2. Authenticated APIs 
 
 <table>
   <thead>
@@ -165,17 +165,17 @@ Wibeex API is grouped in public apis and authenticated apis specific grouping is
 
 Before using the Wibeex Exchange API, you may want to review the following resources:
 
-- [**API Documentation**](#api-introduction) 
+- [**API Documentation**](/docs/intro.md) 
   : Detailed information about API endpoints, including request methods, parameters, and responses.
 
 - [**API Management Console**](https://wibeex.com/api-management) 
   : Create and manage your API keys and permissions.  
 
-- [**Code Examples**](/docs/authentication.md#javascript-example) 
+- [**Code Examples**](/docs/authentication.md#javascript-example-get-balances) 
   : Simple JavaScript examples to help you get started quickly:  
-  - [Place Order](/docs/authentication#javascript-example-place-order---post)  
-  - [Get Balances](/docs/authentication#javascript-example)  
-  - [Cancel Order](/docs/authentication#javascript-example-cancel-order---post)
+  - [Place Order](/docs/authentication#javascript-example-place-order)  
+  - [Get Balances](/docs/authentication#javascript-example-get-balances)  
+  - [Cancel Order](/docs/authentication#javascript-example-cancel-order)
 
 
 

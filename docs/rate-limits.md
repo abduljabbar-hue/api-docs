@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Rate limits
+# Rate Limits
 
 Wibeex applies rate limits to protect platform stability and fair usage. Limits may differ by **IP address**, **API key**, and **endpoint group**.
 
@@ -35,7 +35,7 @@ If you receive **HTTP 429**, reduce request frequency, cache responses where pos
 
 ## Contact
 
-If you need higher limits for market making or institutional connectivity, contact Wibeex support through the website.
+If you need higher limits for market making or institutional connectivity, contact support via the chat icon on the website.
 
 
 ## Related

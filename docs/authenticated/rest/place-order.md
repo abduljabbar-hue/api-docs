@@ -8,7 +8,7 @@ Create a **buy** or **sell** order on a spot market.
 
 :::info Authentication
 
-This endpoint **requires** a valid API key —see [Authentication](../../authentication.md) and [Integration guide](../../integration-guide.md).
+This endpoint **requires** a valid API key — see [Authentication](../../authentication.md) and [Integration guide](../../integration-guide.md).
 
 :::
 
@@ -39,7 +39,7 @@ POST /api/v2/peatio/market/orders
 
 ## Response fields
 
-Successful responses use the unified envelope (`code`, `data`, `message`). The `data` object is a **order** record, for example:
+Successful responses use the unified envelope (`code`, `data`, `message`). The `data` object is an **order** record, for example:
 
 | Field | Type | Description |
 |-------|------|-------------|
@@ -55,34 +55,34 @@ Successful responses use the unified envelope (`code`, `data`, `message`). The `
 
 
 ## Example request
-see [place order example](/docs/authentication.md#javascript-example-place-order---post)
+see [place order example](/docs/authentication.md#javascript-example-place-order)
 
 
 ## Example response
 
 ```json
- {
-  id: 267016,
-  side: 'buy',
-  ord_type: 'limit',
-  stop_loss_type: 'limit',
-  stop_price: '0.0',
-  price: '65000.12',
-  avg_price: '0.0',
-  state: 'pending',
-  market: 'btcusdt',
-  maker_fee: '0.0015',
-  created_at: '2026-04-07T09:34:58Z',
-  updated_at: '2026-04-07T09:34:58Z',
-  origin_volume: '0.001',
-  remaining_volume: '0.001',
-  executed_volume: '0.0',
-  amount_precision: 5,
-  price_precision: 2,
-  trades_count: 0,
-  bid: 'usdt',
-  ask: 'btc'
- }
+{
+  "id": 267016,
+  "side": "buy",
+  "ord_type": "limit",
+  "stop_loss_type": "limit",
+  "stop_price": "0.0",
+  "price": "65000.12",
+  "avg_price": "0.0",
+  "state": "pending",
+  "market": "btcusdt",
+  "maker_fee": "0.0015",
+  "created_at": "2026-04-07T09:34:58Z",
+  "updated_at": "2026-04-07T09:34:58Z",
+  "origin_volume": "0.001",
+  "remaining_volume": "0.001",
+  "executed_volume": "0.0",
+  "amount_precision": 5,
+  "price_precision": 2,
+  "trades_count": 0,
+  "bid": "usdt",
+  "ask": "btc"
+}
  
 ```
 

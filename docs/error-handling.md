@@ -73,7 +73,7 @@ These may occur depending on request configuration and API key settings:
 ```
 
 
-# API Errors
+## API Errors
 
 These errors occur after authentication succeeds.
 
@@ -99,7 +99,7 @@ These errors occur after authentication succeeds.
 
 ---
 
-##  Public APIs
+## Public APIs
 
 | Error                       | Description                |
 |-----------------------------|----------------------------|

@@ -2,9 +2,9 @@
 sidebar_position: 4
 ---
 
-# User profile Details
+# User Profile Details
 
-Return the **current user** .
+Return the **current user**.
 
 :::info Authentication
 
@@ -29,7 +29,7 @@ GET /api/v2/barong/resource/users/me
 
 ## Request parameters
 
-No query parameters required for   **`/me`** route.
+No query parameters required for **`/me`** route.
 
 
 ## Response fields
@@ -71,89 +71,89 @@ curl -L "https://wibeex.com/api/v2/barong/resource/users/me" \
 
 ```json
 {
-  email: 'abduljabbar@alasoft.co',
-  uid: 'ID852B549F6C',
-  role: 'superadmin',
-  level: 3,
-  otp: true,
-  state: 'active',
-  admin_role: 'superadmin',
-  account_type: 'individual',
-  language: 'en',
-  mode: 'dark',
-  referral_uid: 'ID7435813450',
-  buy_sell: true,
-  data: null,
-  labels: [
+  "email": "abduljabbar@alasoft.co",
+  "uid": "ID852B549F6C",
+  "role": "superadmin",
+  "level": 3,
+  "otp": true,
+  "state": "active",
+  "admin_role": "superadmin",
+  "account_type": "individual",
+  "language": "en",
+  "mode": "dark",
+  "referral_uid": "ID7435813450",
+  "buy_sell": true,
+  "data": null,
+  "labels": [
     {
-      key: 'basic-kyc-level',
-      value: 'verified',
-      scope: 'private',
-      description: null,
-      created_at: '2025-10-01T07:49:51Z',
-      updated_at: '2025-10-01T10:05:34Z'
+      "key": "basic-kyc-level",
+      "value": "verified",
+      "scope": "private",
+      "description": null,
+      "created_at": "2025-10-01T07:49:51Z",
+      "updated_at": "2025-10-01T10:05:34Z"
     },
     {
-      key: 'email',
-      value: 'verified',
-      scope: 'private',
-      description: null,
-      created_at: '2025-10-01T07:11:24Z',
-      updated_at: '2025-10-01T07:11:24Z'
+      "key": "email",
+      "value": "verified",
+      "scope": "private",
+      "description": null,
+      "created_at": "2025-10-01T07:11:24Z",
+      "updated_at": "2025-10-01T07:11:24Z"
     },
     {
-      key: 'otp',
-      value: 'enabled',
-      scope: 'private',
-      description: null,
-      created_at: '2026-02-27T05:11:31Z',
-      updated_at: '2026-02-27T05:11:31Z'
+      "key": "otp",
+      "value": "enabled",
+      "scope": "private",
+      "description": null,
+      "created_at": "2026-02-27T05:11:31Z",
+      "updated_at": "2026-02-27T05:11:31Z"
     },
     {
-      key: 'phone',
-      value: 'verified',
-      scope: 'private',
-      description: null,
-      created_at: '2025-10-01T07:19:25Z',
-      updated_at: '2025-10-01T07:19:25Z'
+      "key": "phone",
+      "value": "verified",
+      "scope": "private",
+      "description": null,
+      "created_at": "2025-10-01T07:19:25Z",
+      "updated_at": "2025-10-01T07:19:25Z"
     }
   ],
-  phones: [
+  "phones": [
     {
-      country: 'PK',
-      number: '923187684002',
-      validated_at: '2025-10-01T07:19:25.000Z'
+      "country": "PK",
+      "number": "923187684002",
+      "validated_at": "2025-10-01T07:19:25.000Z"
     }
   ],
-  profiles: [
+  "profiles": [
     {
-      first_name: 'abdul',
-      last_name: 'jabar',
-      dob: null,
-      address: 'north karachi',
-      gender: null,
-      postcode: '45677',
-      city: 'karachi',
-      country: 'PK',
-      country_state: 'sindh',
-      state: 'drafted',
-      metadata: {},
-      created_at: '2025-10-01T07:11:07Z',
-      updated_at: '2025-10-01T07:49:42Z'
+      "first_name": "abdul",
+      "last_name": "jabar",
+      "dob": null,
+      "address": "north karachi",
+      "gender": null,
+      "postcode": "45677",
+      "city": "karachi",
+      "country": "PK",
+      "country_state": "sindh",
+      "state": "drafted",
+      "metadata": {},
+      "created_at": "2025-10-01T07:11:07Z",
+      "updated_at": "2025-10-01T07:49:42Z"
     }
   ],
-  sumsub_applicants: [
+  "sumsub_applicants": [
     {
-      id: '68dcdd1ec1f47de44df47c9b',
-      level: 'basic-kyc-level',
-      external_identifier_id: 'ID852B549F6C-basic-kyc-level',
-      created_at: '2025-10-01T07:49:51Z',
-      updated_at: '2025-10-01T07:49:51Z'
+      "id": "68dcdd1ec1f47de44df47c9b",
+      "level": "basic-kyc-level",
+      "external_identifier_id": "ID852B549F6C-basic-kyc-level",
+      "created_at": "2025-10-01T07:49:51Z",
+      "updated_at": "2025-10-01T07:49:51Z"
     }
   ],
-  created_at: '2025-10-01T07:11:06Z',
-  updated_at: '2026-04-07T09:12:34Z',
-  resend_blocked_time: '2026-04-07T09:12:34.644+00:00'
+  "created_at": "2025-10-01T07:11:06Z",
+  "updated_at": "2026-04-07T09:12:34Z",
+  "resend_blocked_time": "2026-04-07T09:12:34.644+00:00"
 }
 ```
 
