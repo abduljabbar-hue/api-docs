@@ -40,7 +40,7 @@ The base URL for WebSocket is as follows:
 
 
 ## Module grouping
-Wibeex APIs are grouped into public APIs and authenticated APIs as follows.
+Wibeex APIs are grouped into public APIs and authenticated APIs as follows:
 
 ### 1. Public APIs
 
