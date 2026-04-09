@@ -6,56 +6,70 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  padding: 0px 100px;
+  gap: 30px;
+  padding: 0px 120px;
 }
 
 /* Card */
 .card {
-  background: linear-gradient(180deg, #111827 0%, #0b1220 100%);
-  padding: 18px;
+  background: linear-gradient(180deg, #131824 0%, #1f2b42 100%);
+  padding: 20px; /* ⬅️ increased from 18px */
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.05);
   transition: all 0.25s ease;
-  height: 92%; /* 👈 equal height cards */
-  
+  height: 100%;
 }
 
-/* Hover */
-.card:hover {
-  transform: translateY(-6px);
-  border-color: #00e0b8;
-  box-shadow: 0 10px 30px rgba(0, 224, 184, 0.08);
-}
-
-/* Icon */
-.icon {
-  font-size: 28px;
-  margin-bottom: 14px;
-}
-
-/* Title */
 .card h3 {
-  color: #fff;
-  margin-bottom: 12px;
+  color: #ffffff;
   font-size: 18px;
+  font-weight: 600; /* ⬅️ stronger title */
 }
 
-/* Text */
 .card p {
   color: #9ca3af;
   font-size: 14px;
-  line-height: 1.65;
+  line-height: 1.6;
+  margin: 0; /* ⬅️ remove weird spacing */
 }
+
+
+.card p,
+.card span {
+  text-decoration: none !important;
+}
+/* Hover */
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 224, 184, 0.4); /* softer */
+  box-shadow: 0 12px 28px rgba(0, 224, 184, 0.12);
+}
+
+
+/* Icon */
+.icon {
+
+}
+
+.cardLink {
+  text-decoration: none !important;
+  color: inherit;
+  }
 
 /* Highlight note */
 .note {
   display: inline-block;
-  margin-top: 12px;
+  font-size: 12px;   /* ⬅️ smaller */
   color: #00e0b8;
+ 
+  border-radius: 999px; /* ⬅️ pill shape */
   font-weight: 500;
+  text-decoration: underline !important;
 }
 
+.cardLink:hover .note {
+  text-decoration: underline !important;
+}
 /* Responsive */
 @media (max-width: 996px) {
   .grid {

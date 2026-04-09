@@ -4,7 +4,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Welcome to Wibeex API Docs',
+  title: 'Welcome to Wibeex API Documentation',
   favicon: 'img/favicon.ico',
 
   url: 'https://www.wibeex.com',
@@ -71,8 +71,10 @@ const config = {
       ],
     },
 
-
-
+   footer: {
+      copyright: `© ${new Date().getFullYear()} Wibeex. All rights reserved.`,
+   },
+   
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,

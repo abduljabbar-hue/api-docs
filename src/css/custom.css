@@ -66,11 +66,11 @@ html[data-theme='dark'] .navbar {
 
 /* Inner container */
 .navbar__inner {
-  
+ 
   margin: 0 auto;
   display: flex;
   align-items: center;
-  width: 90%;
+  width: 100%;
 }
 
 /* Logo */
@@ -81,12 +81,18 @@ html[data-theme='dark'] .navbar {
  
 }
 
+.theme-layout-navbar-right{
+  
+  margin-right: 100px;
+}
 
 .navbar__logo img {
   height: 30px; /* 🔥 slightly bigger + balanced */
   width: auto;
   display: block;
-  margin-right: 200px;
+  margin-right: 127px;
+  
+  margin-left: 23px;
 }
 
 
@@ -98,7 +104,7 @@ html[data-theme='dark'] .navbar {
   padding: 6px 10px; /* 🔥 balanced click area */
   border-radius: 6px;
   transition: all 0.18s ease;
-  margin: 0 30px;
+  margin: 0 14px;
 }
 
 
@@ -144,7 +150,17 @@ html[data-theme='dark'] .navbar {
   width: auto !important;
 }
 
+.footer {
+background-color: #e6e7eb;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  text-align: center !important;
+}
 
+.footer__copyright {
+ 
+  text-align: center !important;
+}
 
 .markdown{
  

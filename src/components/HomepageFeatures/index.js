@@ -1,67 +1,62 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
-
+import Link from '@docusaurus/Link';
 const FeatureList = [
   {
     title: 'User Manual',
-   
+    link: '/docs/intro',
     description: (
       <>
         Start here if you are new to Wibeex. Learn account setup,
         verification, and API key generation.
 
-        <br /><br />
-        Understand authentication, request signing, and how to safely
-        use API credentials.
+       
 
         <br /><br />
-        <span className={styles.note}>👉 Recommended first step</span>
+        <span className={styles.note}>Recommended first step</span>
       </>
     ),
   },
   {
     title: 'Public APIs',
- 
+   link: '/docs/spot/rest/ticker',
     description: (
       <>
         Access real-time market data including tickers, markets,
         and pricing without authentication.
 
-        <br /><br />
-        Perfect for dashboards, charts, and tracking market activity.
+      
 
         <br /><br />
-        <span className={styles.note}>👉 No API key required</span>
+        <span className={styles.note}>No API key required</span>
       </>
     ),
   },
   {
     title: 'Authenticated APIs',
-   
+   link:'/docs/authenticated/rest/place-order',
     description: (
       <>
         Execute trades, manage balances, and access user data
         using API key authentication.
-
         <br /><br />
-        Includes orders, cancellations, balances, and profiles.
-
-        <br /><br />
-        <span className={styles.note}>👉 Requires API key</span>
+        <span className={styles.note}>Requires API key</span>
       </>
     ),
   },
 ];
 
-function Feature({title, description, icon}) {
+function Feature({title, description, icon, link}) {
   return (
-    <div className={styles.card}>
-      <div className={styles.icon}>{icon}</div>
+     <Link  to={link} className={clsx(styles.cardLink)}>
+      <div className={styles.card}>
+        <div className={styles.icon}>{icon}</div>
 
-      <Heading as="h3">{title}</Heading>
-      <p>{description}</p>
-    </div>
+        <Heading as="h3">{title}</Heading>
+        <p>{description}</p>
+      </div>
+    </Link>
   );
 }
 
