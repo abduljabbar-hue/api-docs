@@ -10,6 +10,7 @@ This guide helps you understand how to connect and work with the Wibeex exchange
 Wibeex provides simple and flexible APIs, so you can build trading apps, automate strategies, or create your own tools easily.
 
 ## Documentation structure
+The API documentation is organized into the following structure:
 
 | Section | Description |
 |---------|-------------|
