@@ -16,7 +16,7 @@ The API documentation is organized into the following structure:
 |---------|-------------|
 | **API Introduction** | Provides the documentation structure, an overall introduction to the API, and related materials (including [code examples](/docs/authentication.md#javascript-example-get-balances)). |
 | **Integration Guide** | Explains how to connect and start using the Wibeex API step by step. |
-| **Authentication** | Shows how to create an API key and securely access the API. |
+| **Authentication** | Describes how to generate an API key and authenticate. |
 | **Rate Limits** | Explains usage limits and how often you can call each API. |
 | **Error Handling** | Lists common errors and how to handle them. |
 
