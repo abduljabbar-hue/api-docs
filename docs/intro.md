@@ -10,7 +10,6 @@ This guide helps you understand how to connect and work with the Wibeex exchange
 Wibeex provides simple and flexible APIs, so you can build trading apps, automate strategies, or create your own tools easily.
 
 ## Documentation structure
-Wibeex APIs are grouped into public APIs and authenticated APIs as follows.
 
 | Section | Description |
 |---------|-------------|
@@ -40,7 +39,7 @@ The base URL for WebSocket is as follows:
 
 
 ## Module grouping
-Wibeex API is grouped in public APIs and authenticated APIs grouping is as follows. 
+Wibeex APIs are grouped into public APIs and authenticated APIs as follows.
 
 ### 1. Public APIs
 
