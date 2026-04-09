@@ -14,7 +14,7 @@ The API documentation is organized into the following structure:
 
 | Section | Description |
 |---------|-------------|
-| **API Introduction** | Gives a simple overview of the API, how the docs are organized (including [code examples](/docs/authentication.md#javascript-example-get-balances)). |
+| **API Introduction** | Provides the documentation structure, an overall introduction to the API, and related materials (including [code examples](/docs/authentication.md#javascript-example-get-balances)). |
 | **Integration Guide** | Explains how to connect and start using the Wibeex API step by step. |
 | **Authentication** | Shows how to create an API key and securely access the API. |
 | **Rate Limits** | Explains usage limits and how often you can call each API. |
