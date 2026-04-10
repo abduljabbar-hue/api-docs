@@ -22,18 +22,18 @@ The API documentation is organized into the following structure:
 
 ## API Base URL
 
-Wibeex provides services through **HTTP protocol** and **WebSockets protocol**. The base URLs for accessing these services are as follows:
+Wibeex provides services through **HTTP protocol** and **WebSockets protocol**. Base URLs are as follows:
 
 :::info
 
-The base URL of HTTP is:  
-`  https://wibeex.com/api/v2/peatio  `
+Base URLs for REST API requests:
 
-`https://wibeex.com/api/v2/barong`
+- `https://wibeex.com/api/v2/peatio  `
+
+- `https://wibeex.com/api/v2/barong`
   
 
-The base URL for WebSocket is as follows:
-
+Base URL for WebSocket streams:
 - Public: `wss://wibeex.com/api/v2/ranger/public`
 
 :::
@@ -50,6 +50,7 @@ Wibeex APIs are grouped into public APIs and authenticated APIs as follows:
       <th>Module</th>
       <th>Submodule</th>
       <th>Description</th>
+      <th>Link</th>
     </tr>
   </thead>
   <tbody>
@@ -58,38 +59,49 @@ Wibeex APIs are grouped into public APIs and authenticated APIs as follows:
       <td rowspan="9"><b>Spot</b></td>
       <td>Market Ticker</td>
       <td>Latest market ticker data</td>
+      <td>[View details](/docs/spot/rest/ticker.md)</td>
     </tr>
     <tr>
       <td>Order Book</td>
       <td>Order book depth</td>
+        <td>[View details](/docs/spot/rest/ticker.md)</td>
     </tr>
     <tr>
       <td>Recent Trades</td>
       <td>Latest trades</td>
+        <td>[View details](/docs/spot/rest/ticker.md)</td>
     </tr>
     <tr>
       <td>Markets</td>
       <td>Market list</td>
+        <td>[View details](/docs/spot/rest/ticker.md)</td>
     </tr>
     <tr>
       <td>Market Depth</td>
       <td>Aggregated depth data</td>
+        <td>[View details](/docs/spot/rest/ticker.md)</td>
     </tr>
     <tr>
       <td>K-Line (OHLC)</td>
       <td>Candlestick data</td>
+        <td>[View details](/docs/spot/rest/ticker.md)</td>
     </tr>
+
+    
     <tr>
       <td>Market Summary</td>
       <td>24h market summary</td>
+        <td>[View details](/docs/spot/rest/ticker.md)</td>
     </tr>
     <tr>
       <td>Ticker</td>
       <td>All market tickers</td>
+        <td>[View details](/docs/spot/rest/ticker.md)</td>
     </tr>
     <tr>
       <td>WebSocket</td>
       <td>Real-time public streams</td>
+        <td>[View details](/docs/spot/rest/ticker.md)</td>
     </tr>
 
     <!-- Assets -->
@@ -97,26 +109,32 @@ Wibeex APIs are grouped into public APIs and authenticated APIs as follows:
       <td rowspan="6"><b>Assets</b></td>
       <td>List Currencies</td>
       <td>Currency list</td>
+        <td>[View details](/docs/spot/rest/ticker.md)</td>
     </tr>
     <tr>
       <td>Assets</td>
       <td>Asset details</td>
+        <td>[View details](/docs/spot/rest/ticker.md)</td>
     </tr>
     <tr>
       <td>Coin Listings</td>
       <td>Listed coins</td>
+        <td>[View details](/docs/spot/rest/ticker.md)</td>
     </tr>
     <tr>
       <td>Best Price Conversion</td>
       <td>Price conversion</td>
+        <td>[View details](/docs/spot/rest/ticker.md)</td>
     </tr>
     <tr>
       <td>Blockchain Networks</td>
       <td>Supported networks</td>
+        <td>[View details](/docs/spot/rest/ticker.md)</td>
     </tr>
     <tr>
       <td>Get Currency</td>
       <td>Currency details</td>
+        <td>[View details](/docs/spot/rest/ticker.md)</td>
     </tr>
 
     <!-- Accounts -->
@@ -124,6 +142,7 @@ Wibeex APIs are grouped into public APIs and authenticated APIs as follows:
       <td rowspan="1"><b>Accounts</b></td>
       <td>Member Levels</td>
       <td>User verification level (e.g., KYC verification, 2FA enabled).</td>
+        <td>[View details](/docs/spot/rest/ticker.md)</td>
     </tr>
   </tbody>
 </table>
